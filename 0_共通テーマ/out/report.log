@@ -1,9 +1,9 @@
-This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.sjis) (TeX Live 2022) (preloaded format=platex 2022.4.13)  26 APR 2022 00:02
+This is e-pTeX, Version 3.141592653-p4.0.0-220214-2.6 (utf8.sjis) (TeX Live 2022) (preloaded format=platex 2022.4.13)  27 APR 2022 22:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**c:/Users/mabow/OneDrive/0_実験/report.tex
-(c:/Users/mabow/OneDrive/0_実験/report.tex
+**c:/Users/mabow/Documents/Report_3/0_共通テーマ/report.tex
+(c:/Users/mabow/Documents/Report_3/0_共通テーマ/report.tex
 pLaTeX2e <2021-11-15> (based on LaTeX2e <2021-11-15> patch level 1)
 L3 programming layer <2022-04-10> (c:/texlive/2022/texmf-dist/tex/platex/base/jarticle.cls
 Document Class: jarticle 2020/09/30 v1.8f Standard pLaTeX class
@@ -254,46 +254,49 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <20.74> not available
 [1
 
 ]
+
+LaTeX Warning: Reference `fig:RLC_直列' on page 1 undefined on input line 24.
+
 File: RLC.drawio.pdf Graphic file (type pdf)
 <RLC.drawio.pdf>
 File: RLC2.drawio.pdf Graphic file (type pdf)
 <RLC2.drawio.pdf>
 
-Overfull \hbox (24.74352pt too wide) in paragraph at lines 35--36
+Overfull \hbox (34.781pt too wide) in paragraph at lines 35--36
  [][] 
  []
 
+[1]
 File: RLC直列インピーダンス.png Graphic file (type bmp)
 <RLC直列インピーダンス.png>
 File: RLC直列偏角.png Graphic file (type bmp)
 <RLC直列偏角.png>
 
-Overfull \hbox (30.76433pt too wide) in paragraph at lines 76--77
+Overfull \hbox (23.23788pt too wide) in paragraph at lines 82--83
  [][] 
  []
 
-File: RLCインピーダンス軌跡.drawio.pdf Graphic file (type pdf)
-<RLCインピーダンス軌跡.drawio.pdf>
-[1] [2]
+File: RLC直列軌跡.png Graphic file (type bmp)
+<RLC直列軌跡.png>
+[2]
 File: RLC並列インピーダンス.png Graphic file (type bmp)
 <RLC並列インピーダンス.png>
 File: RLC並列偏角.png Graphic file (type bmp)
 <RLC並列偏角.png>
+File: RLC並列軌跡.png Graphic file (type bmp)
+<RLC並列軌跡.png>
+[3] (out/report.aux)
 
-Overfull \hbox (23.73976pt too wide) in paragraph at lines 102--103
- [][] 
- []
+LaTeX Warning: There were undefined references.
 
-File: RLCインピーダンス軌跡.drawio.pdf Graphic file (type pdf)
-<RLCインピーダンス軌跡.drawio.pdf>
-[3] (out/report.aux) ) 
+ ) 
 Here is how much of TeX's memory you used:
- 4172 strings out of 478697
- 64803 string characters out of 5859202
+ 4179 strings out of 478697
+ 64917 string characters out of 5859202
  560786 words of memory out of 5000000
- 22592 multiletter control sequences out of 15000+600000
+ 22597 multiletter control sequences out of 15000+600000
  481993 words of font info for 78 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 70i,9n,76p,264b,366s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 70i,9n,76p,280b,366s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/report.dvi (4 pages, 7588 bytes).
+Output written on out/report.dvi (4 pages, 8648 bytes).

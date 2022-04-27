@@ -1,8 +1,8 @@
-PWD c:/Users/mabow/OneDrive/0_実験
+PWD C:/Users/mabow/Documents/Report_3/0_共通テーマ
 INPUT c:/texlive/2022/texmf.cnf
 INPUT c:/texlive/2022/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2022/texmf-var/web2c/eptex/platex.fmt
-INPUT c:/Users/mabow/OneDrive/0_実験/report.tex
+INPUT c:/Users/mabow/Documents/Report_3/0_共通テーマ/report.tex
 OUTPUT out/report.log
 INPUT c:/texlive/2022/texmf-dist/tex/platex/base/jarticle.cls
 INPUT c:/texlive/2022/texmf-dist/tex/platex/base/jarticle.cls
