@@ -1,0 +1,119 @@
+\documentclass[11pt,dvipdfmx]{jarticle}
+
+\usepackage{eee}
+
+\begin{document}
+% トップページを書く
+
+\begin{jikkenTitle}
+	\gakunen{3} % 学年を記述。この行で全体の枠を表示
+	\numTitle{0}{共通テーマ(1)} % 実験番号、タイトルを記述
+	\subTitle{} % サブタイトルがあれば記述
+	\jikkenbi{令和4年4月14日(木)} % 実験日を記述
+	%  \jikkenbiII{令和4年y月zz日(aa)} % 実験日を記述(二日目がある場合。ない場合はこの行をコメントアウト)
+	\kyoudou{共同実験者名} % 共同実験者名を記述
+	\yoteibi{MM/DD}% 予定日を記述
+	\hanNumberName{3}{3333}{宮崎 永} % 班番号・学生番号・氏名を記述。この行でタイトルページの描画を終了
+\end{jikkenTitle}
+
+\section{目的}
+\section{原理}
+\section{方法}
+\subsection{実験回路}
+\label{sec:zikkenkairo}
+VSCodeの拡張機能のdraw.ioを用いてRLC直列回路の実験回路図を作成した。これを図\ref{fig:RLC_直列}に示す。
+また、RLC並列回路の場合の実験回路図を\ref{fig:RLC並列}に示す。
+\begin{figure}[htbp]
+	\begin{minipage}[b]{0.45\linewidth}
+		\centering
+		\includegraphics[keepaspectratio, scale=0.5]{RLC.drawio.pdf}
+		\caption{RLC直列回路}
+		\label{fig:RLC直列}
+	\end{minipage}
+	\begin{minipage}[b]{0.45\linewidth}
+		\centering
+		\includegraphics[keepaspectratio, scale=0.5]{RLC2.drawio.pdf}
+		\caption{RLC並列回路}
+		\label{fig:RLC並列}
+	\end{minipage}
+\end{figure}
+
+
+
+\subsection{実験手順}
+\label{sec:zikkentejun}
+図\ref{fig:RLC直列}及び図\ref{fig:RLC並列}の回路を用いて、電圧源の周波数を変化させ、素子の端子電圧と電流を測定する実験を行った。
+以下にその手順を示す。なお、RLC直列回路の抵抗は10$\Omega$、インダクタは100mH、キャパシタ0.1$\mu$Fの物を使用した。
+RLC並列回路の抵抗は10$\Omega$、インダクタは10$\mu$H、キャパシタ47$\mu$Fの物を使用した。
+\subsubsection{RLC直列回路の実験手順}
+\label{sec:RLC直列}
+\begin{enumerate}[1)]
+	\item 電源から正弦波交流を出力し、電圧のピーク値を20Vに設定する。
+	\item 電源の周波数を500Hzから3.5kHzまで200Hz刻みで変化させ、それぞれ各箇所の電圧計と電流計を読み取って記録する。
+\end{enumerate}
+\subsubsection{RLC並列回路の実験手順}
+\label{sec:RLC並列}
+\begin{enumerate}[1)]
+	\item 電源から正弦波交流を出力し、電圧のピーク値を20Vに設定する。
+	\item 電源の周波数を1kHzから15kHzまで1kHz刻みで変化させ、それぞれ各箇所の電圧計と電流計を読み取って記録する。
+\end{enumerate}
+
+
+\section{結果}
+\subsection{RLC直列回路の実験結果}
+\ref{sec:RLC直列}で行った実験の結果を整理し、インピーダンス及び偏角を算出した。
+また、算出した値をグラフにしたものをそれぞれ図\ref{fig:RLC直列_インピーダンス}と図\ref{fig:RLC直列_偏角}に示す。
+さらに、インピーダンスの軌跡を複素平面に描画したものを図\ref{fig:RLC_軌跡１}に示す。
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[keepaspectratio, scale=0.5]{RLC直列インピーダンス.png}
+	\caption{RLC直列回路のインピーダンス}
+	\label{fig:RLC直列_インピーダンス}
+\end{figure}
+\begin{figure}[htbp]
+	\begin{minipage}[b]{0.45\linewidth}
+		\centering
+		\includegraphics[keepaspectratio, scale=0.5]{RLC直列偏角.png}
+		\caption{RLC直列回路の偏角}
+		\label{fig:RLC直列_偏角}
+	\end{minipage}
+	\begin{minipage}[b]{0.45\linewidth}
+		\centering
+		\includegraphics[keepaspectratio, scale=0.5]{RLC直列軌跡.png}
+		\caption{RLC直列回路のインピーダンスの軌跡}
+		\label{fig:RLC_軌跡１}
+	\end{minipage}
+\end{figure}
+\newpage
+
+\subsection{RLC並列回路の実験結果}
+\ref{sec:RLC並列}で行った実験の結果を整理し、インピーダンス及び偏角を算出した。
+また、算出した値をグラフにしたものをそれぞれ図\ref{fig:RLC並列_インピーダンス}と図\ref{fig:RLC並列_偏角}に示す。
+さらに、インピーダンスの軌跡を複素平面に描画したものを図\ref{fig:RLC_軌跡２}に示す。
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[keepaspectratio, scale=0.5]{RLC並列インピーダンス.png}
+	\caption{RLC並列回路のインピーダンス}
+	\label{fig:RLC並列_インピーダンス}
+\end{figure}
+\begin{figure}[htbp]
+	\begin{minipage}[b]{0.45\linewidth}
+		\centering
+		\includegraphics[keepaspectratio, scale=0.5]{RLC並列偏角.png}
+		\caption{RLC並列回路の偏角}
+		\label{fig:RLC並列_偏角}
+	\end{minipage}
+	\begin{minipage}[b]{0.45\linewidth}
+		\centering
+		\includegraphics[keepaspectratio, scale=0.6]{RLC並列軌跡.png}
+		\caption{RLC並列回路のインピーダンスの軌跡}
+		\label{fig:RLC_軌跡２}
+	\end{minipage}
+\end{figure}
+
+
+\section{考察}
+\section{結論}
+
+\end{document}
+
