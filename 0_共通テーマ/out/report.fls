@@ -1,4 +1,4 @@
-PWD /home/mabow/Report_3-1/0_å…±é€šãƒ†ãƒ¼ãƒž
+PWD /home/mabow/Report_3/0_å…±é€šãƒ†ãƒ¼ãƒž
 INPUT /etc/texmf/web2c/texmf.cnf
 INPUT /usr/share/texmf/web2c/texmf.cnf
 INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
@@ -6,7 +6,7 @@ INPUT /etc/texmf/web2c/texmf.cnf
 INPUT /usr/share/texmf/web2c/texmf.cnf
 INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/eptex/platex.fmt
-INPUT /home/mabow/Report_3-1/0_¶¦ÄÌ¥Æ¡¼¥Þ/report.tex
+INPUT /home/mabow/Report_3/0_¶¦ÄÌ¥Æ¡¼¥Þ/report.tex
 OUTPUT out/report.log
 INPUT /usr/share/texlive/texmf-dist/tex/platex/base/jarticle.cls
 INPUT /usr/share/texlive/texmf-dist/tex/platex/base/jarticle.cls
