@@ -122,18 +122,30 @@ RLC並列回路の抵抗は10$\Omega$、インダクタは10$\mu$H、キャパ�
     \label{fig:RLC_軌跡２}
   \end{minipage}
 \end{figure}
-
+\newpage
 
 \section{考察}
 \subsection{RLC直列回路の考察}
-\subsubsection{特定の周波数(共振周波数)においてインピーダンスが最小になることを式を用いて説明せよ}
+\subsubsection{特定の周波数(共振周波数)の理論値を求めよ。}
 \label{sec:直列共振}
-\subsubsection{\ref{fig:RLC直列}の定数Rを変更したときにインピーダンスの値がどうなるか説明せよ}
+\begin{align}
+  f_0 &= \frac{1}{2 \pi  \sqrt{LC}} \\
+      &= \frac{1}{2 \cdot \pi \sqrt{(100 \times 10^{-3})(0.1 \times 10^{-6})}} \\
+      &= 1591.55 \,[\mathrm{Hz}]
+\end{align}
+\subsubsection{\ref{fig:RLC直列}の定数Rを変更したときにインピーダンスの値がどうなるか説明せよ。}
+回路が共振時のインピーダンスの下限値が変わる
 \label{sec:直列R}
 \subsection{RLC並列回路の考察}
-\subsubsection{特定の周波数(共振周波数)においてインピーダンスが最大になることを式を用いて説明せよ}
+\subsubsection{特定の周波数(共振周波数)の理論値を求めよ。}
+\begin{align}
+  f_0 &= \frac{1}{2 \pi  \sqrt{LC}} \\
+      &= \frac{1}{2 \cdot \pi \sqrt{(100 \times 10^{-6})(0.1 \times 47^{-6})}} \\
+      &= 7341.27 \,[\mathrm{Hz}]
+\end{align}
 \label{sec:並列共振}
-\subsubsection{\ref{fig:RLC並列}の定数Rを変更したときにインピーダンスの値がどうなるか説明せよ}
+\subsubsection{\ref{fig:RLC並列}の定数Rを変更したときにインピーダンスの値がどうなるか説明せよ。}
+回路が共振時のインピーダンスの上限値が変わる
 \label{sec:並列R}
 \subsection{課題の答えと狙い}
 共振する現象を原理から理解することで、実際に回路を組んで応用するときに有効である。
