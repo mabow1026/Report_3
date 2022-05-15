@@ -1,10 +1,10 @@
 # Fdb version 3
-["dvipdf"] 1652603259 "out/report.dvi" "out/report.pdf" "out/report" 1652603259
-  "out/report.dvi" 1652603259 11304 43c0634cac64f8b1b4406c7ecd0f91a6 "latex"
+["dvipdf"] 1652603925 "out/report.dvi" "out/report.pdf" "out/report" 1652603925
+  "out/report.dvi" 1652603925 11660 693a29f04c7ffc7dc62197df8c60e28c "latex"
   (generated)
   "out/report.pdf"
-["latex"] 1652603259 "/home/mabow/Report_3/hysteresis/report.tex" "out/report.dvi" "report" 1652603259
-  "/home/mabow/Report_3/hysteresis/report.tex" 1652603258 7266 8439342ff18b9573cf5a942a2f050c43 ""
+["latex"] 1652603924 "/home/mabow/Report_3/hysteresis/report.tex" "out/report.dvi" "report" 1652603925
+  "/home/mabow/Report_3/hysteresis/report.tex" 1652603924 7335 2067dd3e42fe8cab21b718e60c5396ab ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1136768653 1536 02c06700a42be0f5a28664c7273f82e7 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/goth10.tfm" 1463434352 1196 5981e79c37b2cfd27b3612a6783cd4b6 ""
@@ -66,6 +66,8 @@
   "/usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf" 1646502317 40171 cdab547de63d26590bebb3baff566530 ""
   "/usr/local/texlive/2022/texmf-var/web2c/eptex/platex.fmt" 1651387167 2828650 d24574e30c9dead3de0e346d5beca582 ""
   "/usr/local/texlive/2022/texmf.cnf" 1651386989 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
+  "circuit.pdf" 1652601580 16320 a453cbd2d8aa29b14d352052f6449beb ""
+  "circuit_int.pdf" 1652603009 30063 f8b0abb07bf6db357fb9f23bd85ece99 ""
   "eee.sty" 1618295237 5373 e5dfd7252849f9b42f3a35e8b53a4c1b ""
   "fig/bhcurve.pdf" 1489482052 41961 27b99177061b71a354f7cd13cda3c3e7 ""
   "fig/bhcurve.xbb" 1489482052 234 6010c1b5d13d67a3aa9799579db12f67 ""
@@ -80,8 +82,8 @@
   "fig/transformer.pdf" 1489482052 24550 2fac314d6506c25846f34616cfae1a93 ""
   "fig/transformer.xbb" 1489482052 238 a1b4352066ad3dfa095f43bf99092064 ""
   "jlisting.sty" 1495013606 6311 39acaca7319a5dae73524888cbf7591f ""
-  "out/report.aux" 1652603259 2345 81b96d76a279308e0f658cf69fb0d19d "latex"
-  "report.tex" 1652603258 7266 8439342ff18b9573cf5a942a2f050c43 ""
+  "out/report.aux" 1652603925 2695 958308bd4fd1d655d7b89eab7fac02d1 "latex"
+  "report.tex" 1652603924 7335 2067dd3e42fe8cab21b718e60c5396ab ""
   (generated)
   "out/report.aux"
   "out/report.dvi"

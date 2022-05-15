@@ -396,4 +396,12 @@ INPUT ./fig/hizumi_b.pdf
 INPUT ./fig/hizumi_b.pdf
 INPUT fig/hizumi_b.pdf
 INPUT fig/hizumi_b.xbb
+INPUT ./circuit.pdf
+INPUT ./circuit.pdf
+INPUT circuit.pdf
+INPUT extractbb -B cropbox -O circuit.pdf
+INPUT ./circuit_int.pdf
+INPUT ./circuit_int.pdf
+INPUT circuit_int.pdf
+INPUT extractbb -B cropbox -O circuit_int.pdf
 INPUT out/report.aux
