@@ -1,10 +1,10 @@
 # Fdb version 3
-["dvipdf"] 1652790071 "out/report.dvi" "out/report.pdf" "out/report" 1652790071
-  "out/report.dvi" 1652790071 15960 c0bf9e7477a26e33ab90f32c9656bca6 "latex"
+["dvipdf"] 1652794447 "out/report.dvi" "out/report.pdf" "out/report" 1652794448
+  "out/report.dvi" 1652794447 16900 bea6f2e52d59eb03729bfb3ac08cc737 "latex"
   (generated)
   "out/report.pdf"
-["latex"] 1652790070 "/home/mabow/Report_3/hysteresis/report.tex" "out/report.dvi" "report" 1652790071
-  "/home/mabow/Report_3/hysteresis/report.tex" 1652790069 10516 8337cc0d42b104c0a7294cd351526d47 ""
+["latex"] 1652794447 "/home/mabow/Report_3/hysteresis/report.tex" "out/report.dvi" "report" 1652794448
+  "/home/mabow/Report_3/hysteresis/report.tex" 1652794446 11234 50558d33cd7f9948e913e9a85eef2e80 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1136768653 1536 02c06700a42be0f5a28664c7273f82e7 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/goth10.tfm" 1463434352 1196 5981e79c37b2cfd27b3612a6783cd4b6 ""
@@ -82,8 +82,8 @@
   "fig/transformer.pdf" 1489482052 24550 2fac314d6506c25846f34616cfae1a93 ""
   "fig/transformer.xbb" 1489482052 238 a1b4352066ad3dfa095f43bf99092064 ""
   "jlisting.sty" 1495013606 6311 39acaca7319a5dae73524888cbf7591f ""
-  "out/report.aux" 1652790071 3291 b0dacb8e98151db29adb722c85a1003b "latex"
-  "report.tex" 1652790069 10516 8337cc0d42b104c0a7294cd351526d47 ""
+  "out/report.aux" 1652794447 5014 7749a2611bc8446a20c8945be0a9e7b5 "latex"
+  "report.tex" 1652794446 11234 50558d33cd7f9948e913e9a85eef2e80 ""
   (generated)
   "out/report.aux"
   "out/report.dvi"
