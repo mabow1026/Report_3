@@ -163,15 +163,45 @@
 		      \item CH2のプローブを図\ref{fig:circuit}のB点
 	      \end{itemize}
 	\item 入力電圧を75Vから100Vまで5V刻みで変化させ、それぞれ電流と有効電力を測定した。
-	\item 入力電圧が80Vと100Vの時はオシロスコープで波形を観測し、USBに保存した。
+	\item 入力電圧が80Vと100Vの時はオシロスコープで波形を観測し、USBに保存した。なお、オシロスコープは反転モードに設定する。
 \end{enumerate}
 
 \subsubsection{交流磁化特性の測定}
-\begin{enumerate}
-	\item []
+\begin{enumerate}[1)]
+	\item 図\ref{fig:circuit_int}に示した回路のように、各種計器とスライダック、ヒステリシス曲線直視回路セット及びトランスを接続した。
+	\item	スライダックの電圧を0Vに設定し、オシロスコープのプローブをそれぞれ次のように接続した。
+	      \begin{itemize}
+		      \item ch1のGNDを図\ref{fig:circuit_int}のC点
+		      \item ch1のプローブを図\ref{fig:circuit_int}B点
+		      \item ch2をGNDを図\ref{fig:circuit_int}E点
+		      \item ch2のプローブを図\ref{fig:circuit_int}のD点
+	      \end{itemize}
+	\item	入力電圧を80Vと100Vの時はオシロスコープで波形を観測し、USBに保存した。
 \end{enumerate}
-
+\newpage
 \section{結果}
+\subsection{励磁電流及び電力、位相差の測定結果}
+\begin{table}[htbp]
+	\centering
+	\caption{励磁電流及び電力の測定結果}
+	\begin{tabular}{llll}
+		電圧$v[\mathrm{V}$] & 電流$i_0[\mathrm{A}]$ & 電力$P_0[\mathrm{W}]$ & 位相差$\theta[\mathrm{deg}]$ \\ \hline	\hline
+		75                & 41                  & 0.9                 & 72.9813526                \\ \hline
+		80                & 45                  & 1                   & 73.87237979               \\	\hline
+		85                & 49.5                & 1.1                 & 74.84460034               \\	\hline
+		90                & 54.5                & 1.3                 & 74.63092721               \\	\hline
+		95                & 60                  & 1.4                 & 75.78187581               \\	\hline
+		100               & 66                  & 1.6                 & 75.9703346
+	\end{tabular}
+	\label{tab:実験結果}
+\end{table}
+表３は、励磁電流及び電力の測定結果である。それぞれの位相差$\theta[\mathrm{deg}]$は次の式を用いて導出した。
+\begin{equation}
+	\cos \theta = \frac{P_0}{v \cdot i_0}
+\end{equation}
+\begin{equation}
+	\theta = \arccos\left( \frac{P_0}{v \cdot i_0}\right)
+\end{equation}
 \section{考察}
 \section{結論}
 
