@@ -2,3 +2,10 @@
 *.xbb
 *.sty
 out/*
+!out/*.aux
+!out/*.dvi
+!out/*.fdb_latexmk
+!out/*.fls
+!out/*.log
+!out/*.pdf
+!out/*.synctex.gz
