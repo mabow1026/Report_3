@@ -155,13 +155,13 @@
 	\item 図\ref{fig:circuit}に示した回路のように、各種計器とスライダック、ヒステリシス曲線直視回路セットオ及びトランスを接続した。
 	\item スライダックの電圧を0Vに設定し、オシロスコープのプローブを次のように接続した。
 	      \begin{itemize}
-		      \item CH1のGNDを図\ref{fig:circuit}のC点
+		      \item CH1のプローブのGNDを図\ref{fig:circuit}のC点
 		      \item CH1のプローブの先端を図\ref{fig:circuit}のA点
-		      \item CH2のGNDを図\ref{fig:circuit}のC点
+		      \item CH2のプローブのGNDを図\ref{fig:circuit}のC点
 		      \item CH2のプローブの先端を図\ref{fig:circuit}のB点
 	      \end{itemize}
 	\item 入力電圧を75Vから100Vまで5V刻みで変化させ、それぞれ電流と有効電力を測定した。
-	\item 入力電圧が80Vと100Vの時はオシロスコープで波形を観測し、USBに保存した。なお、オシロスコープのCH1は反転モードに設定する。
+	\item 入力電圧が80Vと100Vの時はオシロスコープで波形を観測し、USBに保存した。なお、オシロスコープのCH2は反転モードに設定した。
 \end{enumerate}
 
 \subsubsection{交流磁化特性の測定}
@@ -169,10 +169,10 @@
 	\item 図\ref{fig:circuit_int}に示した回路のように、各種計器とスライダック、ヒステリシス曲線直視回路セット及びトランスを接続した。
 	\item	スライダックの電圧を0Vに設定し、オシロスコープのプローブをそれぞれ次のように接続した。
 	      \begin{itemize}
-		      \item ch1のGNDを図\ref{fig:circuit_int}のC点
-		      \item ch1のプローブの先端を図\ref{fig:circuit_int}B点
-		      \item ch2をGNDを図\ref{fig:circuit_int}E点
-		      \item ch2のプローブの先端を図\ref{fig:circuit_int}のD点
+		      \item CH1のプローブのGNDを図\ref{fig:circuit_int}のC点
+		      \item CH1のプローブの先端を図\ref{fig:circuit_int}B点
+		      \item CH2のプローブのGNDを図\ref{fig:circuit_int}E点
+		      \item CH2のプローブの先端を図\ref{fig:circuit_int}のD点
 	      \end{itemize}
 	\item	入力電圧を80Vと100Vの時はオシロスコープで波形を観測し、USBに保存した。
 \end{enumerate}
@@ -185,12 +185,12 @@
 	\caption{励磁電流及び電力の測定結果}
 	\begin{tabular}{llll}
 		電圧$v\,[\mathrm{V}$] & 電流$i_0\,[\mathrm{A}]$ & 電力$P_0\,[\mathrm{W}]$ & 位相差$\theta \,[\mathrm{deg}]$ \\ \hline	\hline
-		75                  & 41                    & 0.9                   & 72.9813526                   \\ \hline
-		80                  & 45                    & 1                     & 73.87237979                  \\	\hline
-		85                  & 49.5                  & 1.1                   & 74.84460034                  \\	\hline
-		90                  & 54.5                  & 1.3                   & 74.63092721                  \\	\hline
-		95                  & 60                    & 1.4                   & 75.78187581                  \\	\hline
-		100                 & 66                    & 1.6                   & 75.9703346
+		75                  & 41.0                  & 0.9                   & 73.0                         \\ \hline
+		80                  & 45.0                  & 1                     & 73.9                         \\	\hline
+		85                  & 49.5                  & 1.1                   & 74.8                         \\	\hline
+		90                  & 54.5                  & 1.3                   & 74.6                         \\	\hline
+		95                  & 60.0                  & 1.4                   & 75.8                         \\	\hline
+		100                 & 66.0                  & 1.6                   & 76.0
 	\end{tabular}
 	\label{tab:実験結果}
 \end{table}
@@ -201,20 +201,35 @@
 \begin{equation}
 	\theta = \arccos\left( \frac{P_0}{v \cdot i_0}\right)
 \end{equation}
+
+\subsection{励磁電流と電圧のグラフ}
+8頁の図7と図8は、電源電圧が$80\,\mathrm{V}$と$100\,\mathrm{V}$のときの励磁電流$i$と電圧$v$の関係を示したグラフである。
+どちらの電圧の場合も、電圧に対して励磁電流がひずみ、位相が遅れていることがわかる。
+
+\subsection{電流と磁束と磁束密度のグラフ(ヒステリシス曲線)}
+9頁の図9と図10は、電源電圧が$80\,\mathrm{V}と100\,\mathrm{V}$のときの測定電圧$v1$と$v2$より、電圧$i$と磁束$\phi$、
+磁界$H$と磁束密度$B$の関係を表したグラフである。なお、それぞれの単位換算は図9右側の式で行った。
+どちらの電圧の場合も、$v1$と$v2$、$\phi$と$i$が非線形の関係になっていることがわかる。
+また、グラフの概形が原理の項の図\ref{fig:hys:bhcurve}と同様な形になっていることがわかる。
+
 \newpage
 
 
 \includepdf[pages=-,pagecommand={\thispagestyle{plain}}]{img004.pdf}
 \includepdf[pages=-,pagecommand={\thispagestyle{plain}}]{img005.pdf}
-\includepdf[pages=-,pagecommand={\thispagestyle{plain}}]{img006.pdf}
+
 
 
 \section{考察}
 \subsection{課題}
 \subsubsection{励磁電流の作図}
+10頁の図11と図12は入力電圧が$80\,\mathrm{V}$と$100\,\mathrm{V}$のときの磁束$\phi$と励磁電流$i$の関係を作図したグラフである。
+また、ヒステリシス曲線の横軸$i$の大きさを縦軸にプロットし直し、時間に対する励磁電流の変化に書き換えることにより作図を行った。
+
+
 \subsubsection{ヒステリシス曲線の面積の算出}
 \subsubsection{ヒステリシス損の算出}
-
+\includepdf[pages=-,pagecommand={\thispagestyle{plain}}]{img006.pdf}
 
 
 \subsection{考察}
@@ -227,11 +242,11 @@
 \subsubsection{電圧が変化したときのヒステリシス損失}
 磁性体内の磁束が変化すると、磁性体内部の磁気双極子モーメントの向きが変化することで摩擦熱が発生する。
 このとき、磁束$\phi$が最大となった時の磁束密度を$B_m$とすると、鉄心の単位重量あたりのヒステリシス損$\omega_h$は
-$B_m ＜ 1 \mathrm{T}$のとき${B_m}^{1.6}$に、$B_m \geq 1\mathrm{T}$のとき${B_m}^2$にそれぞれ比例する\cite{henatsuki}。
-$B_m \geq 1 \mathrm{T}$のとき、$\omega_h$は次の式で求められる。
+$B_m ＜ 1 \mathrm{T}$のとき${B_\mathrm{m}}^{1.6}$に、$B_m \geq 1\mathrm{T}$のとき${B_m}^2$にそれぞれ比例する\cite{henatsuki}。
+$B_m \geq 1 \mathrm{T}$のとき、$\omega_\mathrm{h}$は次の式で求められる。
 \begin{align}
-	\omega_h & = \sigma_h f {B_m}^2	\nonumber      \\
-	         & =k_1 \frac{E^2}{f}\,[\mathrm{W/kg}]
+	\omega_\mathrm{h} & = \sigma_\mathrm{h} f {B_m}^2	\nonumber \\
+	                  & =k_1 \frac{E^2}{f}\,[\mathrm{W/kg}]
 	\label{eq:ヒステリシス損}
 \end{align}
 ここで、E:起電力$\,[\mathrm{V}]$、f:周波数$\,[\mathrm{Hz}]$、$\sigma_h$:ヒステリシス損係数、$k_1$:比例定数
@@ -242,19 +257,19 @@ $B_m \geq 1 \mathrm{T}$のとき、$\omega_h$は次の式で求められる。
 この損失を渦電流損という\cite{henatsuki}。
 渦電流損の大きさ$\omega_e$は次の式で求められる。
 \begin{align}
-	\omega_e & = \sigma_e t^2 f^2 B_m^2 \nonumber \\
-	         & = k_2 t^2 E^2 \, [\mathrm{W/kg}]
+	\omega_\mathrm{e} & = \sigma_\mathrm{e} t^2 f^2 B_m^2 \nonumber \\
+	                  & = k_2 t^2 E^2 \, [\mathrm{W/kg}]
 	\label{eq:渦電流損}
 \end{align}
-ここで、t:積層銅板一枚の厚さ[mm]、$\sigma_e$は渦電流損係数、$k_2$は比例定数	\\
+ここで、t:積層銅板一枚の厚さ[mm]、$\sigma_\mathrm{e}$は渦電流損係数、$k_2$は比例定数	\\
 式(\ref{eq:渦電流損})より、使用する電圧が2倍になると仮定したとき渦電流損は4倍になることがわかる。
 
 \subsubsection{周波数が変化したときのヒステリシス損失}
-式(\ref{eq:ヒステリシス損})の$\sigma_h$と$B_m$を定数とすると、周波数が2倍になると仮定したときヒステリシス損も2倍になり、比例関係にあることがわかる。
+式(\ref{eq:ヒステリシス損})の$\sigma_\mathrm{h}$と$B_\mathrm{m}$を定数とすると、周波数が2倍になると仮定したときヒステリシス損も2倍になり、比例関係にあることがわかる。
 また、$k_1$と$E$を定数とすると、周波数が2倍になると仮定したときヒステリシス損失が$\frac{1}{2}$倍になり、反比例の関係にあることがわかる。
 
 \subsubsection{周波数が変化したときの渦電流損}
-式(\ref{eq:渦電流損})の$t$と$\sigma_e$と$B_m$を定数とすると、周波数が2倍になると仮定したとき渦電流損は4倍になることがわかる。
+式(\ref{eq:渦電流損})の$t$と$\sigma_\mathrm{e}$と$B_\mathrm{m}$を定数とすると、周波数が2倍になると仮定したとき渦電流損は4倍になることがわかる。
 
 \subsubsection{電力系の測定損失とヒステリシス損失の比較}
 
@@ -267,7 +282,7 @@ $B_m \geq 1 \mathrm{T}$のとき、$\omega_h$は次の式で求められる。
 \begin{itemize}
 	\item	励磁電流を小さくするために透磁率が高いこと。
 	\item 渦電流損を小さくするため、電気抵抗が大きいこと。
-	\item ヒステリシス損を小さくするため、ヒステリシス係数$\sigma_h$が小さいこと。
+	\item ヒステリシス損を小さくするため、ヒステリシス係数$\sigma_\mathrm{h}$が小さいこと。
 \end{itemize}
 以上述べた3つの特性を満たす物質として、珪素鋼板が存在する。この鋼板は、炭素量がきわめて低い軟銅に珪素を0.5％ほど加えてあり、圧延方向に特に優れた磁気特性を持つ。
 このことから変圧器の鉄心には表面をリン酸塩処理を施した厚さ0.3mmほどの薄い珪素鋼板が用いられる。
