@@ -2,6 +2,7 @@
 
 \usepackage{eee}
 \usepackage{subfig}
+\usepackage{pdfpages}
 
 \renewcommand{\labelenumi}{\alph{enumi}}
 \renewcommand{\labelenumii}{\roman{enumii}}
@@ -155,12 +156,12 @@
 	\item スライダックの電圧を0Vに設定し、オシロスコープのプローブを次のように接続した。
 	      \begin{itemize}
 		      \item CH1のGNDを図\ref{fig:circuit}のC点
-		      \item CH1のプローブを図\ref{fig:circuit}のA点
+		      \item CH1のプローブの先端を図\ref{fig:circuit}のA点
 		      \item CH2のGNDを図\ref{fig:circuit}のC点
-		      \item CH2のプローブを図\ref{fig:circuit}のB点
+		      \item CH2のプローブの先端を図\ref{fig:circuit}のB点
 	      \end{itemize}
 	\item 入力電圧を75Vから100Vまで5V刻みで変化させ、それぞれ電流と有効電力を測定した。
-	\item 入力電圧が80Vと100Vの時はオシロスコープで波形を観測し、USBに保存した。なお、オシロスコープは反転モードに設定する。
+	\item 入力電圧が80Vと100Vの時はオシロスコープで波形を観測し、USBに保存した。なお、オシロスコープのCH1は反転モードに設定する。
 \end{enumerate}
 
 \subsubsection{交流磁化特性の測定}
@@ -169,9 +170,9 @@
 	\item	スライダックの電圧を0Vに設定し、オシロスコープのプローブをそれぞれ次のように接続した。
 	      \begin{itemize}
 		      \item ch1のGNDを図\ref{fig:circuit_int}のC点
-		      \item ch1のプローブを図\ref{fig:circuit_int}B点
+		      \item ch1のプローブの先端を図\ref{fig:circuit_int}B点
 		      \item ch2をGNDを図\ref{fig:circuit_int}E点
-		      \item ch2のプローブを図\ref{fig:circuit_int}のD点
+		      \item ch2のプローブの先端を図\ref{fig:circuit_int}のD点
 	      \end{itemize}
 	\item	入力電圧を80Vと100Vの時はオシロスコープで波形を観測し、USBに保存した。
 \end{enumerate}
@@ -200,12 +201,21 @@
 \begin{equation}
 	\theta = \arccos\left( \frac{P_0}{v \cdot i_0}\right)
 \end{equation}
+\newpage
+
+
+\includepdf[pages=-,pagecommand={\thispagestyle{plain}}]{img004.pdf}
+\includepdf[pages=-,pagecommand={\thispagestyle{plain}}]{img005.pdf}
+\includepdf[pages=-,pagecommand={\thispagestyle{plain}}]{img006.pdf}
+
 
 \section{考察}
 \subsection{課題}
 \subsubsection{励磁電流の作図}
 \subsubsection{ヒステリシス曲線の面積の算出}
 \subsubsection{ヒステリシス損の算出}
+
+
 
 \subsection{考察}
 \subsubsection{励磁電流の役割}
