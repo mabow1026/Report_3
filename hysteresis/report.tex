@@ -160,8 +160,11 @@
 		      \item CH2のプローブのGNDを図\ref{fig:circuit}のC点
 		      \item CH2のプローブの先端を図\ref{fig:circuit}のB点
 	      \end{itemize}
+	\item オシロスコープの水平感度を$5\, \mathrm{ms/DIV}$に設定した。
+	\item オシロスコープのCH1の垂直感度を$50\,\mathrm{V/DIV}$、CH2の垂直感度を$500\,\mathrm{mV/DIV}$に設定した。
+	\item オシロスコープのCH2は反転モードに設定した。
 	\item 入力電圧を75Vから100Vまで5V刻みで変化させ、それぞれ電流と有効電力を測定した。
-	\item 入力電圧が80Vと100Vの時はオシロスコープで波形を観測し、USBに保存した。なお、オシロスコープのCH2は反転モードに設定した。
+	\item 入力電圧が80Vと100Vの時はオシロスコープで波形を観測し、USBに保存した。オシロスコープのCH2は反転モードに設定した。
 \end{enumerate}
 
 \subsubsection{交流磁化特性の測定}
@@ -170,11 +173,13 @@
 	\item	スライダックの電圧を0Vに設定し、オシロスコープのプローブをそれぞれ次のように接続した。
 	      \begin{itemize}
 		      \item CH1のプローブのGNDを図\ref{fig:circuit_int}のC点
-		      \item CH1のプローブの先端を図\ref{fig:circuit_int}B点
-		      \item CH2のプローブのGNDを図\ref{fig:circuit_int}E点
+		      \item CH1のプローブの先端を図\ref{fig:circuit_int}のB点
+		      \item CH2のプローブのGNDを図\ref{fig:circuit_int}のE点
 		      \item CH2のプローブの先端を図\ref{fig:circuit_int}のD点
 	      \end{itemize}
-	\item	入力電圧を80Vと100Vの時はオシロスコープで波形を観測し、USBに保存した。
+	\item オシロスコープのCH1の垂直感度を$500\, \mathrm{mV/DIV}$、CH2を$20\, \mathrm{mV/DIV}$に設定した。
+	\item オシロスコープの水平感度表示をX-Y表示に変更した。
+	\item	入力電圧を80Vと100Vに設定し、それぞれオシロスコープで波形を観測し、USBに保存した。
 \end{enumerate}
 \newpage
 
@@ -223,6 +228,7 @@
 \section{考察}
 \subsection{課題}
 \subsubsection{励磁電流の作図}
+\label{sec:sakuzu}
 10頁の図11と図12は入力電圧が$80\,\mathrm{V}$と$100\,\mathrm{V}$のときの磁束$\phi$と励磁電流$i$の関係を作図したグラフである。
 ヒステリシス曲線の横軸$i$の大きさを縦軸にプロットし直し、時間に対する励磁電流の変化に書き換えることにより作図を行った。
 また、図13、図14ともに励磁電流が電圧に対して大きくひずんでいるが、ほぼ同相となっていることがわかる。
@@ -230,6 +236,7 @@
 
 
 \subsubsection{ヒステリシス曲線の面積の算出}
+\label{sec:menseki}
 図11と図12のヒステリシス曲線で囲まれた面積をImageJを用いて計測した。今回は$1\,DIV=1\,cm$とした。図11のヒステリシス曲線の面積は
 $5.157\,\mathrm{cm^2}$、図12のヒステリシス曲線の面積は$8.210\,\mathrm{cm^2}$であった。
 
@@ -238,18 +245,20 @@ $5.157\,\mathrm{cm^2}$、図12のヒステリシス曲線の面積は$8.210\,\ma
 \begin{equation}
 	P = HBS \cdot Al \cdot f\,[\mathrm{W}]
 \end{equation}
-ここで、P:ヒステリシス損、H:1DIVあたりの磁界、B:1DIVあたりの磁束密度、A:磁気回路の断面積、l:時期回路の長さ、f:電源の周波数
+ここで、Pはヒステリシス損、Hは1DIVあたりの磁界、Bは1DIVあたりの磁束密度、Sは\ref{sec:menseki}で算出した面積、Aは磁気回路の断面積、lは時期回路の長さ、fは電源の周波数とする。\\\\
 電源電圧が80Vのときのヒステリシス損は次のようになる。
 \begin{align}
-	P & = HBS \cdot Al \cdot f \nonumber                                                                                                                   \\
-	  & = [\mathrm{A/m/DIV}] \times [\mathrm{Wb/m^2/DIV}] \times [\mathrm{DIV^2}] \times [\mathrm{m^2}] \times [\mathrm{m}] \times [\mathrm{Hz}] \nonumber \\
-	  & \simeq [\mathrm[W]]
+	P & = HBS \cdot Al \cdot f \nonumber                                                                                                                                                          \\
+	  & = 352[\mathrm{A/m/DIV}] \times 0.434[\mathrm{Wb/m^2/DIV}] \times 5.157[\mathrm{DIV^2}] \times 3.84 \times 10^{-4}[\mathrm{m^2}] \times 0.122[\mathrm{m}] \times 50[\mathrm{Hz}] \nonumber \\
+	  & \simeq 1.85[\mathrm{W}]
+	\label{eq:80v}
 \end{align}
 また、電源電圧が100Vのときのヒステリシス損は次のようになる。
 \begin{align}
-	P & = HBS \cdot Al \cdot f \nonumber                                                                                                                   \\
-	  & = [\mathrm{A/m/DIV}] \times [\mathrm{Wb/m^2/DIV}] \times [\mathrm{DIV^2}] \times [\mathrm{m^2}] \times [\mathrm{m}] \times [\mathrm{Hz}] \nonumber \\
-	  & \simeq [\mathrm{W}]
+	P & = HBS \cdot Al \cdot f \nonumber                                                                                                                                                          \\
+	  & = 352[\mathrm{A/m/DIV}] \times 0.434[\mathrm{Wb/m^2/DIV}] \times 8.210[\mathrm{DIV^2}] \times 3.84 \times 10^{-4}[\mathrm{m^2}] \times 0.122[\mathrm{m}] \times 50[\mathrm{Hz}] \nonumber \\
+	  & \simeq 2.94[\mathrm{W}]
+	\label{eq:100v}
 \end{align}
 
 
@@ -262,7 +271,9 @@ $5.157\,\mathrm{cm^2}$、図12のヒステリシス曲線の面積は$8.210\,\ma
 この電流が流れることにより変圧器に磁束$\phi$が生じるため、励磁電流が変圧器の一次側と二次側の間エネルギーの受け渡しをしているといえる。
 
 \subsubsection{励磁電流がひずむ理由}
-
+磁性体は、ヒステリシス現象と時期飽和現象をもつため、正弦波電圧を入力すると、励磁電流はひずむため、これは正弦波ではなくなる。
+\ref{sec:sakuzu}にてヒステリシス曲線から時間を横軸とする励磁電流に復元を行った。その図を考察すると、磁束$\phi$が0付近の場合は励磁電流がほぼ変化していいないことがわかる。
+従って、励磁電流は入力電圧と比較してひずんだ波形になる。
 
 \subsubsection{電圧が変化したときのヒステリシス損失}
 磁性体内の磁束が変化すると、磁性体内部の磁気双極子モーメントの向きが変化することで摩擦熱が発生する。
@@ -296,7 +307,9 @@ $B_m \geq 1 \mathrm{T}$のとき、$\omega_\mathrm{h}$は次の式で求めら�
 \subsubsection{周波数が変化したときの渦電流損}
 式(\ref{eq:渦電流損})の$t$と$\sigma_\mathrm{e}$と$B_\mathrm{m}$を定数とすると、周波数が2倍になると仮定したとき渦電流損は4倍になることがわかる。
 
-\subsubsection{電力系の測定損失とヒステリシス損失の比較}
+\subsubsection{電力計を使用したときの測定損失とヒステリシスの比較}
+表\ref{tab:実験結果}の測定電力は回路内の全体で消費される有効電力である。従って、ヒステリシス損は測定電力より大きな値をとるはずである。
+しかし、実際には、式\ref{eq:80v}及び\ref{eq:100v}で算出された値よりも、測定電力のほうが小さくなっている。
 
 
 \subsubsection{変圧器の鉄心用珪素鋼板について}
