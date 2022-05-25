@@ -224,11 +224,35 @@
 \subsection{課題}
 \subsubsection{励磁電流の作図}
 10頁の図11と図12は入力電圧が$80\,\mathrm{V}$と$100\,\mathrm{V}$のときの磁束$\phi$と励磁電流$i$の関係を作図したグラフである。
-また、ヒステリシス曲線の横軸$i$の大きさを縦軸にプロットし直し、時間に対する励磁電流の変化に書き換えることにより作図を行った。
+ヒステリシス曲線の横軸$i$の大きさを縦軸にプロットし直し、時間に対する励磁電流の変化に書き換えることにより作図を行った。
+また、図13、図14ともに励磁電流が電圧に対して大きくひずんでいるが、ほぼ同相となっていることがわかる。
+さらに、図14は図13と比べて、励磁電流の振幅及びひずみが大きいことがわかる。
 
 
 \subsubsection{ヒステリシス曲線の面積の算出}
+図11と図12のヒステリシス曲線で囲まれた面積をImageJを用いて計測した。今回は$1\,DIV=1\,cm$とした。図11のヒステリシス曲線の面積は
+$5.157\,\mathrm{cm^2}$、図12のヒステリシス曲線の面積は$8.210\,\mathrm{cm^2}$であった。
+
 \subsubsection{ヒステリシス損の算出}
+次に示す式により、ヒステリシス損を算出した。
+\begin{equation}
+	P = HBS \cdot Al \cdot f\,[\mathrm{W}]
+\end{equation}
+ここで、P:ヒステリシス損、H:1DIVあたりの磁界、B:1DIVあたりの磁束密度、A:磁気回路の断面積、l:時期回路の長さ、f:電源の周波数
+電源電圧が80Vのときのヒステリシス損は次のようになる。
+\begin{align}
+	P & = HBS \cdot Al \cdot f \nonumber                                                                                                                   \\
+	  & = [\mathrm{A/m/DIV}] \times [\mathrm{Wb/m^2/DIV}] \times [\mathrm{DIV^2}] \times [\mathrm{m^2}] \times [\mathrm{m}] \times [\mathrm{Hz}] \nonumber \\
+	  & \simeq [\mathrm[W]]
+\end{align}
+また、電源電圧が100Vのときのヒステリシス損は次のようになる。
+\begin{align}
+	P & = HBS \cdot Al \cdot f \nonumber                                                                                                                   \\
+	  & = [\mathrm{A/m/DIV}] \times [\mathrm{Wb/m^2/DIV}] \times [\mathrm{DIV^2}] \times [\mathrm{m^2}] \times [\mathrm{m}] \times [\mathrm{Hz}] \nonumber \\
+	  & \simeq [\mathrm{W}]
+\end{align}
+
+
 \includepdf[pages=-,pagecommand={\thispagestyle{plain}}]{img006.pdf}
 
 
@@ -238,6 +262,7 @@
 この電流が流れることにより変圧器に磁束$\phi$が生じるため、励磁電流が変圧器の一次側と二次側の間エネルギーの受け渡しをしているといえる。
 
 \subsubsection{励磁電流がひずむ理由}
+
 
 \subsubsection{電圧が変化したときのヒステリシス損失}
 磁性体内の磁束が変化すると、磁性体内部の磁気双極子モーメントの向きが変化することで摩擦熱が発生する。
