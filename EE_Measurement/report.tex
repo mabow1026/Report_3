@@ -9,17 +9,17 @@
 \begin{document}
 % トップページを書く
 \begin{jikkenTitle}
- \gakunen{3} % 学年を記述。この行で全体の枠を表示
- \numTitle{1}{電気電子計測} % 実験番号、タイトルを記述
- \subTitle{} % サブタイトルがあれば記述
- \jikkenbi{平成　　年　　月　　日(　　)} % 実験日を記述
- \jikkenbiII{平成　　年　　月　　日(　　)} % 実験日を記述(二日目がある場合。ない場合はこの行をコメントアウト)
- \kyoudou{共同実験者名} % 共同実験者名を記述
- \kyoudouII{} % その他の共同実験者名を記述
- \yoteibi{/ 　}% 予定日を記述
- \yoteibiII{}% 予定日2を記述
- \yoteibiIII{}% 予定日3を記述
- \hanNumberName{}{}{} % 班番号・学生番号・氏名を記述。この行でタイトルページの描画を終了
+	\gakunen{3} % 学年を記述。この行で全体の枠を表示
+	\numTitle{1}{電気電子計測} % 実験番号、タイトルを記述
+	\subTitle{} % サブタイトルがあれば記述
+	\jikkenbi{平成　　年　　月　　日(　　)} % 実験日を記述
+	\jikkenbiII{平成　　年　　月　　日(　　)} % 実験日を記述(二日目がある場合。ない場合はこの行をコメントアウト)
+	\kyoudou{共同実験者名} % 共同実験者名を記述
+	\kyoudouII{} % その他の共同実験者名を記述
+	\yoteibi{/ 　}% 予定日を記述
+	\yoteibiII{}% 予定日2を記述
+	\yoteibiIII{}% 予定日3を記述
+	\hanNumberName{}{}{} % 班番号・学生番号・氏名を記述。この行でタイトルページの描画を終了
 \end{jikkenTitle}
 
 \section{目的}
@@ -55,7 +55,7 @@ myRIOの5V、3.3V、GND端子及びAnalog I/O、Digital I/Oの端子が、ブレ
 \subsubsection{誤差及び相対誤差}
 誤差は\weq{gosa}で定義される。
 \begin{eqnarray}
-	誤差 = 測定値 − 真値 
+	誤差 = 測定値 − 真値
 	\label{eq:gosa}
 \end{eqnarray}
 また、相対誤差とは真値に対する誤差の比である。
@@ -74,14 +74,14 @@ myRIOの5V、3.3V、GND端子及びAnalog I/O、Digital I/Oの端子が、ブレ
 \begin{equation}
 	\bar{y} = \frac{1}{N}\sum^N_{i = 1}y_i
 	\label{eq:heikinchi}
-\end{equation}		
+\end{equation}
 
 \subsubsection{標準偏差}
 標準偏差とは平均値を基準に各測定量がどれほどのばらついているかを定量的に表す値で、\weq{hyoujunhensa}で表すことができる。
 \begin{equation}
 	\sigma = \sqrt{\frac{1}{N - 1}\sum^N_{i = 1}(y_i - \bar{y})^2}
 	\label{eq:hyoujunhensa}
-\end{equation}	
+\end{equation}
 
 \subsection{近似直線（最小二乗法）}
 %。
