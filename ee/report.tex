@@ -1,5 +1,6 @@
 \documentclass[11pt,dvipdfmx]{jarticle}
-
+\usepackage[a4paper,top=3cm,bottom=2cm,left=2cm,right=2cm]{geometry}
+\usepackage{mathtools}
 \begin{document}
 \section{真値と誤差及び相対誤差（誤差率）}
 雑音、計器の限界、環境への適応性などから、測定値には必ず誤差が含まれる。
@@ -21,7 +22,7 @@
 平均値は、簡単な処理方法であるが、説得力のある処理方法である。
 測定値を$x_1, x_2, ..., x_n$とすると、
 \begin{equation}
-  x = \frac{1}{n} (x_1 + x_2 + \cdots + x_n) = \frac{1}{n} \sum_{i=1}^n x_i
+  \bar{x} = \frac{1}{n} (x_1 + x_2 + \cdots + x_n) = \frac{1}{n} \sum_{i=1}^n x_i
 \end{equation}
 データ数$n$が多くなるにつれ、平均値に含まれる誤差は小さくなる。
 
@@ -30,16 +31,51 @@
 \begin{equation}
   u = \sigma^2 = \frac{1}{n} \sum_{i=1}^n (x_i - \mu)^2
 \end{equation}
-母平均$\mu$と標本平均$x$は異なる値であるが、$n \rightarrow \infty$で$x \rightarrow \mu$となる。
+母平均$\mu$と標本平均$\bar{x}$は異なる値であるが、$n \rightarrow \infty$で$\bar{x} \rightarrow \mu$となる。
+
+\subsection{正規分布}
+母集団の分布に関係なく、同一条件下の測定値が$x$と$x+dx$の間にある相対度数(確率密度)は正規分布(ガウスの誤差)に従うとされ、次式で表現される。
+\begin{equation}
+  f(x)dx = \frac{1}{\sqrt{2 \pi}}\mathrm{exp}\left\{-\frac{(x-u)^2}{2 \sigma^2}\right\}dx
+\end{equation}
 
 \section{散布図の回帰分析(線形回帰・最小二乗法)}
 \subsection{最小二乗法}
-n回の測定値を$x_1, x_2, ..., x_n,$真値をTとする。$x_i$に対応する誤差を$\epsilon_i = x_i - T$
-とし、${\epsilon_{i}}^2$の和を$\epsilon$とする。
-
-
-\subsection{線形回帰}
-
-
-
+測定データの組から、ある関数を用いて近似するとき、その関数が測定値に対してよい近似になるように残差(測定値と近似曲線の差)
+の二乗和が最小になるように係数を決定する方法を最小二乗法という。
+また、測定値を独立変数として、その従属量を計算から求めるときに、回帰直線がよく使われる。\\
+$x, Y$の間に次の線形関係が成り立つとする。
+\begin{equation}
+  Y = ax + b
+\end{equation}
+$n$回の実験データより、係数$a, b$を決定し、以後xを測定し$Y$を求める。理論的に正しい値を$Y_i$とすると、
+残差$\varepsilon_i$と$y_i, x_i$には次の関係がある。
+\begin{equation}
+  \left.
+  \begin{aligned}
+    \varepsilon_1 = y_1 - Y_1  = & \,y_1 - ax_1 -b \\
+    \varepsilon_2 = y_2 - Y_2  = & \,y_2 - ax_2 -b \\
+                                 & \vdots          \\
+    \varepsilon_n = y_n - Y_n  = & \,y_n - ax_n -b
+  \end{aligned}
+  \right\}
+\end{equation}
+$\varepsilon_i$の二乗和が最小になる$a, b$は、次の方程式(正規方程式)を満足する。
+\begin{equation}
+  \left.
+  \begin{aligned}
+     & a \sum_{i=1}^n x_i + nb = \sum_{i=1}^n y_i                     \\
+     & a \sum_{i=1}^n x_i + b \sum_{i=1}^n x_i = \sum_{i=1}^n x_i y_i
+  \end{aligned}
+  \right\}
+\end{equation}
+以上より係数$a, b$を求めると、次式となる。
+\begin{equation}
+  \left.
+  \begin{aligned}
+     & a = \frac{\sum(y_i - \bar{y} x_i)}{\sum (x_i - \bar{x})^2} \\
+     & b = \bar{y} - a \bar{x}
+  \end{aligned}
+  \right\}
+\end{equation}
 \end{document}
