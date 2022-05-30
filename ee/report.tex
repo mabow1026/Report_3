@@ -2,21 +2,44 @@
 
 \begin{document}
 \section{真値と誤差及び相対誤差（誤差率）}
-\subsection{真値}
-
-\subsection{誤差及び相対誤差}
+雑音、計器の限界、環境への適応性などから、測定値には必ず誤差が含まれる。
+真の値(真値)と測定値の差を誤差という。
+誤差$\epsilon$は次の式で求まる。
+\begin{equation}
+  \epsilon = M - T
+\end{equation}
+ここで、Mは測定値、Tは真値である。
+真値は不明のことが多く、平均値や理論値を真値とする。
+誤差率あるいは相対誤差は次の式で表される。
+一般的に、測定値が大きくなると誤差が大きくなるので、真値や測定値との比で表現した方が適切である。
+\begin{equation}
+  \frac{\epsilon}{T}
+\end{equation}
 
 \section{統計処理（正規分布・平均値・標準偏差）}
-
-
 \subsection{平均値}
-
+平均値は、簡単な処理方法であるが、説得力のある処理方法である。
+測定値を$x_1, x_2, ..., x_n$とすると、
+\begin{equation}
+  x = \frac{1}{n} (x_1 + x_2 + \cdots + x_n) = \frac{1}{n} \sum_{i=1}^n x_i
+\end{equation}
+データ数$n$が多くなるにつれ、平均値に含まれる誤差は小さくなる。
 
 \subsection{標準偏差}
-
+測定値と平均値(母平均)の差を偏差といい、偏差の２乗和平均$u$を分散、その平方根を標準偏差$\sigma$といい次式で表す。
+\begin{equation}
+  u = \sigma^2 = \frac{1}{n} \sum_{i=1}^n (x_i - \mu)^2
+\end{equation}
+母平均$\mu$と標本平均$x$は異なる値であるが、$n \rightarrow \infty$で$x \rightarrow \mu$となる。
 
 \section{散布図の回帰分析(線形回帰・最小二乗法)}
-\subsection{線形回帰}
 \subsection{最小二乗法}
+n回の測定値を$x_1, x_2, ..., x_n,$真値をTとする。$x_i$に対応する誤差を$\epsilon_i = x_i - T$
+とし、${\epsilon_{i}}^2$の和を$\epsilon$とする。
+
+
+\subsection{線形回帰}
+
+
 
 \end{document}
