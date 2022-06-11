@@ -2,7 +2,7 @@
 
 \usepackage{eee}
 \usepackage{subfig}
-
+\usepackage{here}
 \renewcommand{\labelenumi}{\alph{enumi}}
 \renewcommand{\labelenumii}{\roman{enumii}}
 
@@ -129,11 +129,148 @@ myRIOの5V、3.3V、GND端子及びAnalog I/O、Digital I/Oの端子が、ブレ
 	\label{tab:使用器具}
 \end{table}
 
-
 \subsection{実験手順}
+\subsubsection{文字列および数値の入力・表示}
+\begin{enumerate}[1)]
+	\item	フロントパネルに数値制御器と数値表示器のブロックを作成した。
+	\item 数値表示器と数値表示器をワイヤーで接続した。
+	\item 数値制御器に任意の数値を入力した。
+	\item 数値制御機に入力した数値が数値表示器に表示されていることを確認した。
+\end{enumerate}
 
+\subsubsection{数値計算(演算子・制御表示器作成・ワイヤ分岐・ブロック置換)}
+\subsubsection*{足し算の作成}
+\begin{enumerate}[1)]
+	\item	フロントパネルに数値制御器ブロック2つと数値表示器ブロックを作成した。
+	\item ブロックダイヤグラム上に和ブロックを配置した。
+	\item 2の数値制御器を和ブロックの入力に、数値表示器の入力を和ブロックの出力にワイヤーで接続した。
+	\item 2つの数値制御器に数値を入力し、数値表示器に二つの数字の和が表示されていることを確認した。
+\end{enumerate}
+
+\subsubsection*{コネクタを使用した足し算の作成}
+\begin{enumerate}[1)]
+	\item 和ブロックを配置した。
+	\item 和ブロックのxコネクタを右クリックし、プルダウンメニューの作成から制御器を選択した。
+	\item 同様に、yのコネクタを右クリックし制御器を配置し、x+yコネクタを右クリックし、表示器を配置した。
+	\item 2つの制御器に数値を入力し、数値表示器に二つの数字の和が表示されていることを確認した。
+\end{enumerate}
+
+\subsubsection*{ワイヤ分岐による掛け算の作成}
+\begin{enumerate}[1)]
+	\item これまで作成したプログラムはそのままに、ブロックダイヤグラム上に積ブロックを配置した。
+	\item 積ブロックのxコネクタと数値制御器xから出ているワイヤを接続した。
+	\item 積ブロックのyコネクタと数値制御器yから出ているワイヤを接続した。
+	\item 積ブロック右側のx*yコネクタを右クリックし、プルダウンメニューの作成から表示器を選択した。
+	\item 制御器の数値を変えたときでも、表示器に表示される値が正しいことを確認した。
+\end{enumerate}
+
+\subsubsection*{引き算・割り算の作成(ブロックの置換)}
+\begin{enumerate}[1)]
+	\item 和ブロックを右クリックし、プルダウンメニューの置換から数値パレットで差を選択した。また、差ブロックの表示器の名前をx-yに変更した。
+	\item 同様に、積ブロックを右クリックし、プルダウンメニューの置換から数値パレットで商を選択した。また、差ブロックの表示器の名前のx/yに変更した。
+	\item	プログラムを実行し、それぞれの表示器に正しい値を表示されていることを確認した。
+\end{enumerate}
+
+\subsubsection{forループの作成}
+\begin{enumerate}[1)]
+	\item ブロックダイヤグラム上にforループブロックを作成した。
+	\item 繰り返し回数Nブロックに繰り返し回数の定数を設定した。
+	\item 和、数値制御器、数値制御器をforループ内に1つづつ用意した。
+	\item 和ブロックのコネクタxとカウンタ変数iのブロックと繋いだ。
+	\item プログラムを実行し、表示器の値を確認する。
+	\item メニューバーの電球アイコンを選択し、カウンタ変数iの値が変化しながら実行されることを確認した。
+	\item 数値制御器yのブロックをforループの外に配置した時の動作も確認した。
+\end{enumerate}
+
+\subsubsection{アナログ電圧値の計測}
+\begin{enumerate}[1)]
+	\item ジャンパ線を用いて、ブレッドボードに図\ref{fig:jikken1}に示す配線をした。
+	      \begin{figure}[H]
+		      \centering
+		      \includegraphics[keepaspectratio, scale=1.0]{jikken1.pdf}
+		      \caption{電圧値計測実験の配線図}
+		      \label{fig:jikken1}
+	      \end{figure}
+	\item myRIOのAポートにブレッドボードを差し込み、次のように実験を行った。
+	\item forループなどを用いて、AIO端子の電圧を100回測定できるようなプログラムをLabVIEWを用いて作成し、5V, 3.3V. GNDの出力電圧をそれぞれ計測した。また、電圧の切り替えはジャンパ線の接続先を変えることによって行った。
+	\item 出力電圧が$0\,\mathrm{V}$から$5\,\mathrm{V}$まで$0.2\,\mathrm{V}$刻みで変化するようにプログラムを変更した。
+	\item 測定したデータからexcelを用いて平均値と標準偏差を求めた。
+\end{enumerate}
+
+\subsubsection{電圧の出力}
+\begin{enumerate}[1)]
+	\item ジャンパ線を用いて、ブレッドボードに図\ref{fig:jikken2}に示す配線をした。
+	      \begin{figure}[H]
+		      \centering
+		      \includegraphics[keepaspectratio, scale=1.0]{jikken2.pdf}
+		      \caption{電圧の出力実験の配線図}
+		      \label{fig:jikken2}
+	      \end{figure}
+	\item myRIOのAポートにブレッドボードを差し込み、次のように実験を行った。
+	\item $0\,\mathrm{V}$から$5\,\mathrm{V}$まで0.05秒ごとに$0.5\,\mathrm{V}$刻みで出力電圧を変化させ、その電圧をAIO端子で測定するプログラムをLabVIEWを用いて作成し、実行した。
+	\item	測定したデータから、Excelを用いて二乗平均平方根誤差を求めた。
+\end{enumerate}
+
+\subsubsection{素子の電圧電流特性の計測}
+固定抵抗、可変抵抗、Cdsセンサ、力センサ、発光ダイオードにおいて電圧電流特性の計測を行った。
+すべての素子において実験手順は同様であり、次に示す。
+\begin{enumerate}[1)]
+	\item ジャンパ線を用いて、ブレッドボードに図\ref{fig:jikken3}に示す配線をした。$R_0$は電流計測用のシャント抵抗、$R_{\mathrm{X}}$は計測対象の素子である。
+	      \begin{figure}[H]
+		      \centering
+		      \includegraphics[keepaspectratio, scale=1.0]{jikken3.pdf}
+		      \caption{電圧の出力実験の配線図}
+		      \label{fig:jikken3}
+	      \end{figure}
+	\item myRIOのAポートにブレッドボードを差し込んだ。
+	\item $0\,\mathrm{V}$から$5\,\mathrm{V}$まで0.05秒ごとに$0.5\,\mathrm{V}$刻みで出力電圧AO0を変化させ、AI0とAI1それぞれの端子の電圧を測定するプログラムをLabVIEWを用いて作成し、実行した。
+	\item	測定したデータから、Excelを用いて各素子の電圧電流特性のグラフを作成した。
+\end{enumerate}
+
+\begin{itemize}
+	\item 固定抵抗の電圧電流特性の計測
+	      \begin{enumerate}[1)]
+		      \item 図\ref{fig:jikken3}の$R_\mathrm{X}$を$1\,\mathrm{k}\Omega$の固定抵抗に変更した。
+		      \item 図\ref{fig:jikken3}の$R_0$を$100\,\Omega$、$1\,\mathrm{k}\Omega$、$10\,\mathrm{k}\Omega$、$100\,\mathrm{k}\Omega$の固定抵抗にそれぞれ変更し、各素子について電圧電流特性を計測した。
+	      \end{enumerate}
+	\item 可変抵抗の電圧電流特性の計測
+	      \begin{enumerate}[1)]
+		      \item $R_X$を図\ref{fig:teiko}に示す可変抵抗に変更した。このとき、3端子のうち、2端子を使用して計測した。
+		            \begin{figure}[H]
+			            \centering
+			            \includegraphics[keepaspectratio, scale=0.8]{teiko.pdf}
+			            \caption{可変抵抗}
+			            \label{fig:teiko}
+		            \end{figure}
+		      \item 図\ref{fig:jikken3}の$R_0$を$100\,\Omega$の抵抗に変更した。
+		      \item 電流特性の計測時、図\ref{fig:teiko}の可変抵抗のボリュームのA、B、Cの各箇所において計測した。
+		      \item 同様の計測を他の2端子の組み合わせでも行った。
+	      \end{enumerate}
+	\item Cdsセンサの電圧電流特性
+	      \begin{enumerate}[1)]
+		      \item 図\ref{fig:jikken3}の$R_\mathrm{X}$をCdsセンサに変更した。
+		      \item 図\ref{fig:jikken3}の$R_0$を$100\,\Omega$の抵抗に変更した。
+		      \item 明るい場合と暗い場合の両方で計測を行った。
+	      \end{enumerate}
+	\item 力センサの電圧電流特性
+	      \begin{enumerate}[1)]
+		      \item 図\ref{fig:jikken3}の$R_\mathrm{X}$を力センサーに変更した。
+		      \item 図\ref{fig:jikken3}の$R_0$を$100\,\Omega$の抵抗に変更した。
+		      \item センサーに力を加えていない状態と加えた状態の両方で計測を行った。
+	      \end{enumerate}
+	\item	発光ダイオードの電圧電流特性
+	      \begin{enumerate}[1)]
+		      \item 図\ref{fig:jikken3}の$R_\mathrm{X}$を発光ダイオードに変更した。このとき、素子の極性に注意しなければならない。カソードがGND、アノードがAO0側になるように接続する。
+		      \item 図\ref{fig:jikken3}の$R_0$を$100\,\Omega$の抵抗に変更した。
+		      \item センサーに力を加えていない状態と加えた状態の両方で計測を行った。
+		      \item 白、赤、緑、青色の発光ダイオードについて、それぞれ電圧電流特性を計測した。
+	      \end{enumerate}
+\end{itemize}
+\newpage
 
 \section{結果}
+
+
 \section{考察}
 \section{結論}
 
