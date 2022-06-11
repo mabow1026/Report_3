@@ -5,6 +5,9 @@
 \usepackage{here}
 \renewcommand{\labelenumi}{\alph{enumi}}
 \renewcommand{\labelenumii}{\roman{enumii}}
+\newcounter{mycounter} % カウンタの宣言
+\setcounter{mycounter}{0} % カウンタの初期化
+\newcommand{\useMycounter}[1][]{\refstepcounter{mycounter}{#1}プログラム{\themycounter}: }
 
 \begin{document}
 % トップページを書く
@@ -120,6 +123,7 @@ myRIOの5V、3.3V、GND端子及びAnalog I/O、Digital I/Oの端子が、ブレ
 \begin{table}[htbp]
 	\caption{使用器具}
 	\begin{tabular}{cccc}
+		\hline
 		機器名                            & 製造元                  & 型番           & 固有番号                \\ \hline \hline
 		PC                             & iiyama               & NK50SZ       & NKNK50SZ0000K000388 \\	\hline
 		LabVIEW                        & National Instruments & ver19.0.1f3  &                     \\	\hline
@@ -182,7 +186,7 @@ myRIOの5V、3.3V、GND端子及びAnalog I/O、Digital I/Oの端子が、ブレ
 	\item 数値制御器yのブロックをforループの外に配置した時の動作も確認した。
 \end{enumerate}
 
-\subsubsection{アナログ電圧値の計測}
+\subsubsection{実験2-1:アナログ電圧値の計測}
 \begin{enumerate}[1)]
 	\item ジャンパ線を用いて、ブレッドボードに図\ref{fig:jikken1}に示す配線をした。
 	      \begin{figure}[H]
@@ -197,7 +201,7 @@ myRIOの5V、3.3V、GND端子及びAnalog I/O、Digital I/Oの端子が、ブレ
 	\item 測定したデータからexcelを用いて平均値と標準偏差を求めた。
 \end{enumerate}
 
-\subsubsection{電圧の出力}
+\subsubsection{実験2-2:電圧の出力}
 \begin{enumerate}[1)]
 	\item ジャンパ線を用いて、ブレッドボードに図\ref{fig:jikken2}に示す配線をした。
 	      \begin{figure}[H]
@@ -211,7 +215,7 @@ myRIOの5V、3.3V、GND端子及びAnalog I/O、Digital I/Oの端子が、ブレ
 	\item	測定したデータから、Excelを用いて二乗平均平方根誤差を求めた。
 \end{enumerate}
 
-\subsubsection{素子の電圧電流特性の計測}
+\subsubsection{実験3:素子の電圧電流特性の計測}
 固定抵抗、可変抵抗、Cdsセンサ、力センサ、発光ダイオードにおいて電圧電流特性の計測を行った。
 すべての素子において実験手順は同様であり、次に示す。
 \begin{enumerate}[1)]
@@ -228,12 +232,13 @@ myRIOの5V、3.3V、GND端子及びAnalog I/O、Digital I/Oの端子が、ブレ
 \end{enumerate}
 
 \begin{itemize}
-	\item 固定抵抗の電圧電流特性の計測
+	\item 実験3-1:固定抵抗の電圧電流特性の計測
 	      \begin{enumerate}[1)]
 		      \item 図\ref{fig:jikken3}の$R_\mathrm{X}$を$1\,\mathrm{k}\Omega$の固定抵抗に変更した。
 		      \item 図\ref{fig:jikken3}の$R_0$を$100\,\Omega$、$1\,\mathrm{k}\Omega$、$10\,\mathrm{k}\Omega$、$100\,\mathrm{k}\Omega$の固定抵抗にそれぞれ変更し、各素子について電圧電流特性を計測した。
 	      \end{enumerate}
-	\item 可変抵抗の電圧電流特性の計測
+
+	\item 実験3-2:可変抵抗の電圧電流特性の計測
 	      \begin{enumerate}[1)]
 		      \item $R_X$を図\ref{fig:teiko}に示す可変抵抗に変更した。このとき、3端子のうち、2端子を使用して計測した。
 		            \begin{figure}[H]
@@ -246,19 +251,22 @@ myRIOの5V、3.3V、GND端子及びAnalog I/O、Digital I/Oの端子が、ブレ
 		      \item 電流特性の計測時、図\ref{fig:teiko}の可変抵抗のボリュームのA、B、Cの各箇所において計測した。
 		      \item 同様の計測を他の2端子の組み合わせでも行った。
 	      \end{enumerate}
-	\item Cdsセンサの電圧電流特性
+
+	\item 実験3-3:Cdsセンサの電圧電流特性
 	      \begin{enumerate}[1)]
 		      \item 図\ref{fig:jikken3}の$R_\mathrm{X}$をCdsセンサに変更した。
 		      \item 図\ref{fig:jikken3}の$R_0$を$100\,\Omega$の抵抗に変更した。
 		      \item 明るい場合と暗い場合の両方で計測を行った。
 	      \end{enumerate}
-	\item 力センサの電圧電流特性
+
+	\item 実験3-4力センサの電圧電流特性
 	      \begin{enumerate}[1)]
 		      \item 図\ref{fig:jikken3}の$R_\mathrm{X}$を力センサーに変更した。
 		      \item 図\ref{fig:jikken3}の$R_0$を$100\,\Omega$の抵抗に変更した。
 		      \item センサーに力を加えていない状態と加えた状態の両方で計測を行った。
 	      \end{enumerate}
-	\item	発光ダイオードの電圧電流特性
+
+	\item	実験3-5発光ダイオードの電圧電流特性
 	      \begin{enumerate}[1)]
 		      \item 図\ref{fig:jikken3}の$R_\mathrm{X}$を発光ダイオードに変更した。このとき、素子の極性に注意しなければならない。カソードがGND、アノードがAO0側になるように接続する。
 		      \item 図\ref{fig:jikken3}の$R_0$を$100\,\Omega$の抵抗に変更した。
@@ -269,7 +277,75 @@ myRIOの5V、3.3V、GND端子及びAnalog I/O、Digital I/Oの端子が、ブレ
 \newpage
 
 \section{結果}
+\subsection{実験2-1}
+\begin{figure}[H]
+	\centering
+	\includegraphics[keepaspectratio, scale=0.6]{ex21_2.pdf}\\
+	\useMycounter[\label{prog1}]実験2-1のフローチャート
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[keepaspectratio, scale=0.6]{ex21_1.pdf}\\
+	\useMycounter[\label{kekka1}]実験2-1のフロントパネル
+\end{figure}
+\begin{table}[H]
+	\centering
+	\caption{実験2-1の結果}
+	\begin{tabular}{lll}
+		測定した電圧{[}V{]} & 平均値{[}V{]} & 標準偏差{[}V{]}             \\ \hline \hline
+		GND           & 0.004883   & 1.2143$\times 10^{-17}$ \\	\hline
+		3.3           & 3.26296342 & 0.00017094              \\ \hline
+		5             & 4.998779   & 9.77$\times 10^{-15}$   \\ \hline
+	\end{tabular}
+\end{table}
 
+\subsubsection{実験2-2}
+\begin{figure}[H]
+	\centering
+	\includegraphics[keepaspectratio, scale=0.7]{ex22_2.pdf}\\
+	\useMycounter[\label{prog2}]実験2-2のフローチャート
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[keepaspectratio, scale=0.7]{ex21_1.pdf}\\
+	\useMycounter[\label{kekka2}]実験2-2のフロントパネル
+\end{figure}
+\begin{table}[H]
+	\centering
+	\
+	\begin{tabular}{lll}
+		出力電圧{[}V{]}                       & 測定電圧{[}V{]} & 出力電圧と測定電圧の差{[}V{]} \\ \hline \hline
+		0                                 & 0.007324    & -0.00732           \\	\hline
+		0.5                               & 0.499268    & 0.000732           \\	\hline
+		1                                 & 0.999756    & 0.000244           \\ \hline
+		1.5                               & 1.501465    & -0.00147           \\	\hline
+		2                                 & 1.998291    & 0.001709           \\	\hline
+		2.5                               & 2.50122     & -0.00122           \\	\hline
+		3                                 & 3.001709    & -0.00171           \\	\hline
+		3.5                               & 3.499756    & 0.000244           \\	\hline
+		4                                 & 4.002685    & -0.00269           \\	\hline
+		4.5                               & 4.499511    & 0.000489           \\	\hline
+		5                                 & 4.998779    & 0.001221           \\	\hline
+		\multicolumn{2}{l}{二乗平均誤差{[}V{]}} & 0.002571                         \\ \hline
+	\end{tabular}
+\end{table}
+
+\subsection{実験3}
+\begin{figure}[H]
+	\centering
+	\includegraphics[keepaspectratio, scale=0.8]{ex31_2.pdf}\\
+	\useMycounter[\label{prog3}]実験3のフローチャート
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[keepaspectratio, scale=0.8]{ex31_1.pdf}\\
+	\useMycounter[\label{kekka3}]実験3のフロントパネル
+\end{figure}
+\subsubsection{実験3-1}
+\subsubsection{実験3-2}
+\subsubsection{実験3-3}
+\subsubsection{実験3-4}
+\subsubsection{実験3-5}
 
 \section{考察}
 \section{結論}
