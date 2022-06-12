@@ -52,17 +52,17 @@ myRIOの5V、3.3V、GND端子及びAnalog I/O、Digital I/Oの端子が、ブレ
 
 \subsection{真値と誤差及び相対誤差（誤差率）}
 \subsubsection{真値}
-真値とは、測定量(測定値ではない)が単位の何倍であるのかを示している値である。
-真値は必ず存在すると仮定しても我々は真値そのものは知ることができず、ただその存在する範囲を推定することが出来るだけである。
+真値とは、測定量(測定値ではない)が単位の何倍であるのかを示している値である\cite{keisoku}。
+真値は必ず存在すると仮定しても我々は真値そのものは知ることができず、ただその存在する範囲を推定することが出来るだけである\cite{keisoku}。
 
 \subsubsection{誤差及び相対誤差}
-誤差は\weq{gosa}で定義される。
+誤差は\weq{gosa}で定義される\cite{keisoku}。
 \begin{eqnarray}
 	誤差 = 測定値 − 真値
 	\label{eq:gosa}
 \end{eqnarray}
 また、相対誤差とは真値に対する誤差の比である。
-但し真値は分からないので、通常は\weq{soutaigosa}のように誤差が小さいとして真値の代わりに測定値で割る。
+但し真値は分からないので、通常は\weq{soutaigosa}のように誤差が小さいとして真値の代わりに測定値で割る\cite{keisoku}。
 \begin{eqnarray}
 	相対誤差 = \frac{誤差}{真値} \simeq \frac{誤差}{測定値}
 	\label{eq:soutaigosa}
@@ -70,17 +70,17 @@ myRIOの5V、3.3V、GND端子及びAnalog I/O、Digital I/Oの端子が、ブレ
 
 \subsection{統計処理（正規分布・平均値・標準偏差）}
 \subsubsection{正規分布}
-左右対称の釣鐘型に値が分布しているのを正規分布といい、山の頂点に平均値がくる。
+左右対称の釣鐘型に値が分布しているのを正規分布といい、山の頂点に平均値がくる\cite{keisoku}。
 
 \subsubsection{平均値}
-平均値とは$N$個全てのデータの総和を$N$個で割って得られる値で、\weq{heikinchi}で表すことができる。
+平均値とは$N$個全てのデータの総和を$N$個で割って得られる値で、\weq{heikinchi}で表すことができる\cite{keisoku}。
 \begin{equation}
 	\bar{y} = \frac{1}{N}\sum^N_{i = 1}y_i
 	\label{eq:heikinchi}
 \end{equation}
 
 \subsubsection{標準偏差}
-標準偏差とは平均値を基準に各測定量がどれほどのばらついているかを定量的に表す値で、\weq{hyoujunhensa}で表すことができる。
+標準偏差とは平均値を基準に各測定量がどれほどのばらついているかを定量的に表す値で、\weq{hyoujunhensa}で表すことができる\cite{keisoku}。
 \begin{equation}
 	\sigma = \sqrt{\frac{1}{N - 1}\sum^N_{i = 1}(y_i - \bar{y})^2}
 	\label{eq:hyoujunhensa}
@@ -102,12 +102,12 @@ myRIOの5V、3.3V、GND端子及びAnalog I/O、Digital I/Oの端子が、ブレ
 	\label{eq:error}
 \end{eqnarray}
 を最小にする$a$、$b$を求める。
-これを最小二乗法といい、誤差を伴う測定値の処理においてその誤差の二乗の和を最小にすることで、最も確からしい関係式を求める方法である。
+これを最小二乗法といい、誤差を伴う測定値の処理においてその誤差の二乗の和を最小にすることで、最も確からしい関係式を求める方法である\cite{keisoku}。
 \begin{eqnarray}
 	\frac{\partial}{\partial a}E(a,b) &=& 0\\
 	\frac{\partial}{\partial b}E(a,b) &=& 0
 \end{eqnarray}
-から得られる方程式を、それぞれ$a$、$b$について解けば良く、それぞれの解を得るための方程式は次の2つを用いることになる。
+から得られる方程式を、それぞれ$a$、$b$について解けば良く、それぞれの解を得るための方程式は次の2つを用いることになる\cite{keisoku}。
 \begin{equation}
 	a = \frac{\sum_{n=1}^{n}(x_i -\bar{x})(y_i-\bar{y})}{\sum_{n=1}^{n}(x_i-\bar{x})^2}
 	\label{eq:saisyou1}
@@ -278,7 +278,9 @@ myRIOの5V、3.3V、GND端子及びAnalog I/O、Digital I/Oの端子が、ブレ
 
 \section{結果}
 \subsection{実験2-1}
-
+実験2-1で作成したプログラムをプログラム\ref{prog1}に、プログラム\ref{prog1}実行後の出力結果を\ref{kekka1}に示す。
+また、出力結果から平均値・標準偏差を求め整理したものを表\ref{heikin-hensa}に示す。
+5{[}V{]}と、GNDのの測定値と、3.3{[}V{]}の測定値を比較したとき、前者が後者に比べ誤差はかなり小さくなった。
 \begin{figure}[H]
 	\centering
 	\includegraphics[keepaspectratio, scale=0.6]{ex21_2.pdf}\\
@@ -287,8 +289,8 @@ myRIOの5V、3.3V、GND端子及びAnalog I/O、Digital I/Oの端子が、ブレ
 \begin{figure}[H]
 	\centering
 	\includegraphics[keepaspectratio, scale=0.6]{ex21_1.pdf}\\
-	\label{kekka1}
 	\caption{実験2-1のフロントパネル}
+	\label{kekka1}
 \end{figure}
 \begin{table}[H]
 	\centering
@@ -299,9 +301,14 @@ myRIOの5V、3.3V、GND端子及びAnalog I/O、Digital I/Oの端子が、ブレ
 		3.3           & 3.26296342 & 0.00017094              \\ \hline
 		5             & 4.998779   & 9.77$\times 10^{-15}$   \\ \hline
 	\end{tabular}
+	\label{heikin-hensa}
 \end{table}
 
 \subsubsection{実験2-2}
+実験3-2で作成したプログラムをプログラム\ref{prog2}に、プログラム\ref{prog1}実行後の出力結果を\ref{kekka2}に示す。
+また、出力結果より二乗平均平方誤差を求め整理したものを表\ref{heiho}に示す。
+それぞれの出力電圧と測定電圧の誤差はかなり小さい値をとっているため、二乗平均平方誤差もかなり小さい値となっていることがわかる。
+プログラム内のAnalog OutputとAnalog Inputの間にある遅延時間は、myRIOの出力電圧の立ち上がり時間を考慮したものである。この遅延時間を挿入しなかった場合、正しい電圧が計測できなかった。
 \begin{figure}[H]
 	\centering
 	\includegraphics[keepaspectratio, scale=0.5]{ex22_2.pdf}\\
@@ -310,8 +317,8 @@ myRIOの5V、3.3V、GND端子及びAnalog I/O、Digital I/Oの端子が、ブレ
 \begin{figure}[H]
 	\centering
 	\includegraphics[keepaspectratio, scale=0.5]{ex21_1.pdf}\\
-	\label{kekka2}
 	\caption{実験2-2のフロントパネル}
+	\label{kekka2}
 \end{figure}
 \begin{table}[H]
 	\centering
@@ -331,22 +338,29 @@ myRIOの5V、3.3V、GND端子及びAnalog I/O、Digital I/Oの端子が、ブレ
 		5                                    & 4.998779    & 0.001221           \\	\hline	\hline
 		\multicolumn{2}{c}{二乗平均平方根誤差{[}V{]}} & 0.002571                         \\ \hline
 	\end{tabular}
+	\label{heiho}
 \end{table}
 
 \subsection{実験3}
+実験3で作成したプログラムをプログラム\ref{prog3}に、プログラム\ref{prog3}実行後の出力結果を\ref{kekka3}に示す。
+この結果は実験3-2、可変抵抗の1-2端子間でボリューム位置がCの時の結果である。
+実験3は5種類の素子で実験を行うが、すべてこのプログラムを使用して計測を行った。
 \begin{figure}[H]
 	\centering
 	\includegraphics[keepaspectratio, scale=0.7]{ex31_2.pdf}\\
-	\useMycounter[\label{prog3}]実験3のフローチャート
+	\useMycounter[\label{prog3}]実験3のプログラム
 \end{figure}
 \begin{figure}[H]
 	\centering
 	\includegraphics[keepaspectratio, scale=0.7]{ex31_1.pdf}\\
+	\caption{実験3のフロントパネル}
 	\label{kekka3}
-	\caption{実験2-3のフロントパネル}
 \end{figure}
 
 \subsubsection{実験3-1}
+実験3-1を行い得られた固定抵抗の電圧電流特性を図\ref{fig:3-1}に示す。
+測定対象の素子は変更せず、$R_0$のみ変更したため、グラフの傾きは変化していない。
+$R_0$の素子値が大きくなるにつれ、電流の変化量が少なくなっていることもわかる。
 \begin{figure}[H]
 	\centering
 	\includegraphics[keepaspectratio, scale=0.7]{3-1.pdf}
@@ -355,6 +369,8 @@ myRIOの5V、3.3V、GND端子及びAnalog I/O、Digital I/Oの端子が、ブレ
 \end{figure}
 
 \subsubsection{実験3-2}
+実験3-2を行い得られた可変抵抗の電圧電流特性を図\ref{fig:3-2_1}、図\ref{fig:3-2_2}、図\ref{fig:3-2_3}に示す。
+それぞれ順に1-2端子間、2-3端子間、1-3端子間において計測した結果である。
 \begin{figure}[H]
 	\centering
 	\includegraphics[keepaspectratio, scale=0.7]{3-2_1.pdf}
@@ -375,6 +391,8 @@ myRIOの5V、3.3V、GND端子及びAnalog I/O、Digital I/Oの端子が、ブレ
 \end{figure}
 
 \subsubsection{実験3-3}
+実験3-3を行い得られたCdsセンサの電圧電流特性を図\ref{fig:3-3}に示す。
+明るい場合は電圧が0.5V付近で電流が約7mA流れているのに対し、暗い場合はほとんど電流が流れていないる。
 \begin{figure}[H]
 	\centering
 	\includegraphics[keepaspectratio, scale=0.7]{3-3.pdf}
@@ -383,6 +401,9 @@ myRIOの5V、3.3V、GND端子及びAnalog I/O、Digital I/Oの端子が、ブレ
 \end{figure}
 
 \subsubsection{実験3-4}
+実験3-4を行い得られた力センサの電圧電流特性を図\ref{fig:3-4}に示す。
+力を加えていないときは、傾きがほぼ0であり、電流がほとんど変化していなかった。
+力を加えた場合、5V付近で約1.4mAほど流れており、力を加えていないときに比べて電流を流していた。
 \begin{figure}[H]
 	\centering
 	\includegraphics[keepaspectratio, scale=0.7]{3-4.pdf}
@@ -390,7 +411,12 @@ myRIOの5V、3.3V、GND端子及びAnalog I/O、Digital I/Oの端子が、ブレ
 	\label{fig:3-4}
 \end{figure}
 
+\newpage
 \subsubsection{実験3-5}
+実験3-5を行い得られたLEDの電圧電流特性を図\ref{fig:3-5}に示す。
+単色LEDの発光色の波長が短いほど順方向降下電圧$V_\mathrm{F}$が大きくなった。
+白色LEDは赤色より$V_\mathrm{F}$が大きいが緑色LEDよりは小さくなった。
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[keepaspectratio, scale=0.7]{3-5.pdf}
@@ -398,13 +424,22 @@ myRIOの5V、3.3V、GND端子及びAnalog I/O、Digital I/Oの端子が、ブレ
 	\label{fig:3-5}
 \end{figure}
 
-
 \section{考察}
+\subsection{理想の平均値及び標準偏差}
+
+\subsection{出力電圧値と計測電圧値の関係}
+\subsection{誤差の変化}
+\subsection{可変抵抗器の内部構造}
+\subsection{Cdsセンサの抵抗値と光強度の関係}
+\subsection{力センサの抵抗値と加える力の強さの関係}
+\subsection{LEDの発光色と電圧電流特性の関係}
+\subsection{可変抵抗の抵抗値}
+
 \section{結論}
 
 \begin{thebibliography}{9}%参考文献数が10以上の場合は9を99に変更
 	%\bibitem{xxx}の引用を本文中で行うには\cite{xxx}と記述。
-	\bibitem{a} 著者名, 書名，出版社，発行年．
+	\bibitem{keisoku} 阿部武雄/村山実, 電気・電子計測第4版，森北出版，2019．
 \end{thebibliography}
 
 
