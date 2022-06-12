@@ -278,6 +278,7 @@ myRIOの5V、3.3V、GND端子及びAnalog I/O、Digital I/Oの端子が、ブレ
 
 \section{結果}
 \subsection{実験2-1}
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[keepaspectratio, scale=0.6]{ex21_2.pdf}\\
@@ -286,7 +287,8 @@ myRIOの5V、3.3V、GND端子及びAnalog I/O、Digital I/Oの端子が、ブレ
 \begin{figure}[H]
 	\centering
 	\includegraphics[keepaspectratio, scale=0.6]{ex21_1.pdf}\\
-	\useMycounter[\label{kekka1}]実験2-1のフロントパネル
+	\label{kekka1}
+	\caption{実験2-1のフロントパネル}
 \end{figure}
 \begin{table}[H]
 	\centering
@@ -302,50 +304,100 @@ myRIOの5V、3.3V、GND端子及びAnalog I/O、Digital I/Oの端子が、ブレ
 \subsubsection{実験2-2}
 \begin{figure}[H]
 	\centering
-	\includegraphics[keepaspectratio, scale=0.7]{ex22_2.pdf}\\
+	\includegraphics[keepaspectratio, scale=0.5]{ex22_2.pdf}\\
 	\useMycounter[\label{prog2}]実験2-2のフローチャート
 \end{figure}
 \begin{figure}[H]
 	\centering
-	\includegraphics[keepaspectratio, scale=0.7]{ex21_1.pdf}\\
-	\useMycounter[\label{kekka2}]実験2-2のフロントパネル
+	\includegraphics[keepaspectratio, scale=0.5]{ex21_1.pdf}\\
+	\label{kekka2}
+	\caption{実験2-2のフロントパネル}
 \end{figure}
 \begin{table}[H]
 	\centering
-	\
-	\begin{tabular}{lll}
-		出力電圧{[}V{]}                       & 測定電圧{[}V{]} & 出力電圧と測定電圧の差{[}V{]} \\ \hline \hline
-		0                                 & 0.007324    & -0.00732           \\	\hline
-		0.5                               & 0.499268    & 0.000732           \\	\hline
-		1                                 & 0.999756    & 0.000244           \\ \hline
-		1.5                               & 1.501465    & -0.00147           \\	\hline
-		2                                 & 1.998291    & 0.001709           \\	\hline
-		2.5                               & 2.50122     & -0.00122           \\	\hline
-		3                                 & 3.001709    & -0.00171           \\	\hline
-		3.5                               & 3.499756    & 0.000244           \\	\hline
-		4                                 & 4.002685    & -0.00269           \\	\hline
-		4.5                               & 4.499511    & 0.000489           \\	\hline
-		5                                 & 4.998779    & 0.001221           \\	\hline
-		\multicolumn{2}{l}{二乗平均誤差{[}V{]}} & 0.002571                         \\ \hline
+	\caption{実験2-2の結果}
+	\begin{tabular}{lcc}
+		出力電圧{[}V{]}                          & 測定電圧{[}V{]} & 出力電圧と測定電圧の差{[}V{]} \\ \hline \hline
+		0                                    & 0.007324    & -0.00732           \\	\hline
+		0.5                                  & 0.499268    & 0.000732           \\	\hline
+		1                                    & 0.999756    & 0.000244           \\ \hline
+		1.5                                  & 1.501465    & -0.00147           \\	\hline
+		2                                    & 1.998291    & 0.001709           \\	\hline
+		2.5                                  & 2.50122     & -0.00122           \\	\hline
+		3                                    & 3.001709    & -0.00171           \\	\hline
+		3.5                                  & 3.499756    & 0.000244           \\	\hline
+		4                                    & 4.002685    & -0.00269           \\	\hline
+		4.5                                  & 4.499511    & 0.000489           \\	\hline
+		5                                    & 4.998779    & 0.001221           \\	\hline	\hline
+		\multicolumn{2}{c}{二乗平均平方根誤差{[}V{]}} & 0.002571                         \\ \hline
 	\end{tabular}
 \end{table}
 
 \subsection{実験3}
 \begin{figure}[H]
 	\centering
-	\includegraphics[keepaspectratio, scale=0.8]{ex31_2.pdf}\\
+	\includegraphics[keepaspectratio, scale=0.7]{ex31_2.pdf}\\
 	\useMycounter[\label{prog3}]実験3のフローチャート
 \end{figure}
 \begin{figure}[H]
 	\centering
-	\includegraphics[keepaspectratio, scale=0.8]{ex31_1.pdf}\\
-	\useMycounter[\label{kekka3}]実験3のフロントパネル
+	\includegraphics[keepaspectratio, scale=0.7]{ex31_1.pdf}\\
+	\label{kekka3}
+	\caption{実験2-3のフロントパネル}
 \end{figure}
+
 \subsubsection{実験3-1}
+\begin{figure}[H]
+	\centering
+	\includegraphics[keepaspectratio, scale=0.7]{3-1.pdf}
+	\caption{固定抵抗の電圧電流特性}
+	\label{fig:3-1}
+\end{figure}
+
 \subsubsection{実験3-2}
+\begin{figure}[H]
+	\centering
+	\includegraphics[keepaspectratio, scale=0.7]{3-2_1.pdf}
+	\caption{可変抵抗の端子1-2間の電圧電流特性}
+	\label{fig:3-2_1}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[keepaspectratio, scale=0.7]{3-2_2.pdf}
+	\caption{可変抵抗の端子2-3間の電圧電流特性}
+	\label{fig:3-2_2}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[keepaspectratio, scale=0.7]{3-2_3.pdf}
+	\caption{可変抵抗の端子1-3間の電圧電流特性}
+	\label{fig:3-2_3}
+\end{figure}
+
 \subsubsection{実験3-3}
+\begin{figure}[H]
+	\centering
+	\includegraphics[keepaspectratio, scale=0.7]{3-3.pdf}
+	\caption{Cdsセンサの電圧電流特性}
+	\label{fig:3-3}
+\end{figure}
+
 \subsubsection{実験3-4}
+\begin{figure}[H]
+	\centering
+	\includegraphics[keepaspectratio, scale=0.7]{3-4.pdf}
+	\caption{力センサの電圧電流特性}
+	\label{fig:3-4}
+\end{figure}
+
 \subsubsection{実験3-5}
+\begin{figure}[H]
+	\centering
+	\includegraphics[keepaspectratio, scale=0.7]{3-5.pdf}
+	\caption{LEDの電圧電流特性}
+	\label{fig:3-5}
+\end{figure}
+
 
 \section{考察}
 \section{結論}
