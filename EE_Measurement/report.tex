@@ -3,6 +3,7 @@
 \usepackage{eee}
 \usepackage{subfig}
 \usepackage{here}
+\usepackage{url}
 \renewcommand{\labelenumi}{\alph{enumi}}
 \renewcommand{\labelenumii}{\roman{enumii}}
 \newcounter{mycounter} % カウンタの宣言
@@ -216,7 +217,7 @@ myRIOの5V、3.3V、GND端子及びAnalog I/O、Digital I/Oの端子が、ブレ
 \end{enumerate}
 
 \subsubsection{実験3:素子の電圧電流特性の計測}
-固定抵抗、可変抵抗、Cdsセンサ、力センサ、発光ダイオードにおいて電圧電流特性の計測を行った。
+固定抵抗、可変抵抗、CdSセンサ、力センサ、発光ダイオードにおいて電圧電流特性の計測を行った。
 すべての素子において実験手順は同様であり、次に示す。
 \begin{enumerate}[1)]
 	\item ジャンパ線を用いて、ブレッドボードに図\ref{fig:jikken3}に示す配線をした。$R_0$は電流計測用のシャント抵抗、$R_{\mathrm{X}}$は計測対象の素子である。
@@ -227,53 +228,51 @@ myRIOの5V、3.3V、GND端子及びAnalog I/O、Digital I/Oの端子が、ブレ
 		      \label{fig:jikken3}
 	      \end{figure}
 	\item myRIOのAポートにブレッドボードを差し込んだ。
-	\item $0\,\mathrm{V}$から$5\,\mathrm{V}$まで0.05秒ごとに$0.5\,\mathrm{V}$刻みで出力電圧AO0を変化させ、AI0とAI1それぞれの端子の電圧を測定するプログラムをLabVIEWを用いて作成し、実行した。
+	\item $0\,\mathrm{V}$から$5\,\mathrm{V}$まで0.05秒ごとに$0.5\,\mathrm{V}$刻みで出力電圧AO0を変化させ、AI0とAI1それぞれの端子の電圧を測定するプログラムをLabVIEWを用いて作成し実行した。また、LabVIEW上で抵抗$R_0$の値から電流を求めるプログラムを記述した。
 	\item	測定したデータから、Excelを用いて各素子の電圧電流特性のグラフを作成した。
 \end{enumerate}
 
-\begin{itemize}
-	\item 実験3-1:固定抵抗の電圧電流特性の計測
-	      \begin{enumerate}[1)]
-		      \item 図\ref{fig:jikken3}の$R_\mathrm{X}$を$1\,\mathrm{k}\Omega$の固定抵抗に変更した。
-		      \item 図\ref{fig:jikken3}の$R_0$を$100\,\Omega$、$1\,\mathrm{k}\Omega$、$10\,\mathrm{k}\Omega$、$100\,\mathrm{k}\Omega$の固定抵抗にそれぞれ変更し、各素子について電圧電流特性を計測した。
-	      \end{enumerate}
+\subsubsection{実験3-1:固定抵抗の電圧電流特性の計測}
+\begin{enumerate}[i)]
+	\item 図\ref{fig:jikken3}の$R_\mathrm{X}$を$1\,\mathrm{k}\Omega$の固定抵抗に変更した。
+	\item 図\ref{fig:jikken3}の$R_0$を$100\,\Omega$、$1\,\mathrm{k}\Omega$、$10\,\mathrm{k}\Omega$、$100\,\mathrm{k}\Omega$の固定抵抗にそれぞれ変更し、各素子について電圧電流特性を計測した。
+\end{enumerate}
 
-	\item 実験3-2:可変抵抗の電圧電流特性の計測
-	      \begin{enumerate}[1)]
-		      \item $R_X$を図\ref{fig:teiko}に示す可変抵抗に変更した。このとき、3端子のうち、2端子を使用して計測した。
-		            \begin{figure}[H]
-			            \centering
-			            \includegraphics[keepaspectratio, scale=0.8]{teiko.pdf}
-			            \caption{可変抵抗}
-			            \label{fig:teiko}
-		            \end{figure}
-		      \item 図\ref{fig:jikken3}の$R_0$を$100\,\Omega$の抵抗に変更した。
-		      \item 電流特性の計測時、図\ref{fig:teiko}の可変抵抗のボリュームのA、B、Cの各箇所において計測した。
-		      \item 同様の計測を他の2端子の組み合わせでも行った。
-	      \end{enumerate}
+\subsubsection{実験3-2:可変抵抗の電圧電流特性の計測}
+\begin{enumerate}[i)]
+	\item $R_X$を図\ref{fig:teiko}に示す可変抵抗に変更した。このとき、3端子のうち1-2端子間を使用した。
+	      \begin{figure}[H]
+		      \centering
+		      \includegraphics[keepaspectratio, scale=0.8]{teiko.pdf}
+		      \caption{可変抵抗}
+		      \label{fig:teiko}
+	      \end{figure}
+	\item 図\ref{fig:jikken3}の$R_0$を$100\,\Omega$の抵抗に変更した。
+	\item 電流特性の計測時、図\ref{fig:teiko}の可変抵抗のボリュームのA、B、Cの各箇所において計測した。
+	\item 同様の計測をほかの2-3端子間、1-3端子間でも行った。
+\end{enumerate}
 
-	\item 実験3-3:Cdsセンサの電圧電流特性
-	      \begin{enumerate}[1)]
-		      \item 図\ref{fig:jikken3}の$R_\mathrm{X}$をCdsセンサに変更した。
-		      \item 図\ref{fig:jikken3}の$R_0$を$100\,\Omega$の抵抗に変更した。
-		      \item 明るい場合と暗い場合の両方で計測を行った。
-	      \end{enumerate}
+\subsubsection{実験3-3:CdSセンサの電圧電流特性}
+\begin{enumerate}[i)]
+	\item 図\ref{fig:jikken3}の$R_\mathrm{X}$をCdSセンサに変更した。
+	\item 図\ref{fig:jikken3}の$R_0$を$100\,\Omega$の抵抗に変更した。
+	\item センサーに懐中電灯を当てた明るい場合と、センサーを手で覆った暗い場合の両方で計測を行った。
+\end{enumerate}
 
-	\item 実験3-4力センサの電圧電流特性
-	      \begin{enumerate}[1)]
-		      \item 図\ref{fig:jikken3}の$R_\mathrm{X}$を力センサーに変更した。
-		      \item 図\ref{fig:jikken3}の$R_0$を$100\,\Omega$の抵抗に変更した。
-		      \item センサーに力を加えていない状態と加えた状態の両方で計測を行った。
-	      \end{enumerate}
+\subsubsection{実験3-4力センサの電圧電流特性}
+\begin{enumerate}[i)]
+	\item 図\ref{fig:jikken3}の$R_\mathrm{X}$を力センサーに変更した。
+	\item 図\ref{fig:jikken3}の$R_0$を$100\,\Omega$の抵抗に変更した。
+	\item センサーに力を加えていない状態と加えた状態の両方で計測を行った。
+\end{enumerate}
 
-	\item	実験3-5発光ダイオードの電圧電流特性
-	      \begin{enumerate}[1)]
-		      \item 図\ref{fig:jikken3}の$R_\mathrm{X}$を発光ダイオードに変更した。このとき、素子の極性に注意しなければならない。カソードがGND、アノードがAO0側になるように接続する。
-		      \item 図\ref{fig:jikken3}の$R_0$を$100\,\Omega$の抵抗に変更した。
-		      \item センサーに力を加えていない状態と加えた状態の両方で計測を行った。
-		      \item 白、赤、緑、青色の発光ダイオードについて、それぞれ電圧電流特性を計測した。
-	      \end{enumerate}
-\end{itemize}
+\subsubsection{実験3-5発光ダイオードの電圧電流特性}
+\begin{enumerate}[i)]
+	\item 図\ref{fig:jikken3}の$R_\mathrm{X}$を発光ダイオードに変更した。このとき、素子の極性に注意しなければならない。カソードがGND、アノードがAO0側になるように接続した。
+	\item 図\ref{fig:jikken3}の$R_0$を$100\,\Omega$の抵抗に変更した。
+	\item センサーに力を加えていない状態と加えた状態の両方で計測を行った。
+	\item 白、赤、緑、青色の発光ダイオードについて、それぞれ電圧電流特性を計測した。
+\end{enumerate}
 \newpage
 
 \section{結果}
@@ -393,12 +392,12 @@ $R_0$の素子値が大きくなるにつれ、電流の変化量が少なくな
 
 \newpage
 \subsubsection{実験3-3}
-実験3-3を行い得られたCdsセンサの電圧電流特性を図\ref{fig:3-3}に示す。
+実験3-3を行い得られたCdSセンサの電圧電流特性を図\ref{fig:3-3}に示す。
 明るい場合は電圧が0.5V付近で電流が約7mA流れているのに対し、暗い場合はほとんど電流が流れていないる。
 \begin{figure}[H]
 	\centering
 	\includegraphics[keepaspectratio, scale=0.7]{3-3.pdf}
-	\caption{Cdsセンサの電圧電流特性}
+	\caption{CdSセンサの電圧電流特性}
 	\label{fig:3-3}
 \end{figure}
 
@@ -456,15 +455,12 @@ N個すべてのデータが同じであると仮定したとき、平均値は�
 	V = IR
 	\label{eq:ohm}
 \end{equation}
-式\ref{eq:ohm}を変形し、電圧電流特性の傾きをaとしたときに次のように表せる。
+式(\ref{eq:ohm})を変形し、電圧電流特性の傾きを$a$としたときに次のように表せる。
 \begin{align}
-	a & = \frac{1}{R\, [\Omega]}           \\
+	a & = \frac{1}{R\, [\Omega]}
 	\label{eq:henkei1}
-	a & = \frac{1}{R\, [\mathrm{k}\Omega]} \\
-	\label{eq:henkei2}
 \end{align}
-式(\ref{eq:henkei1})、式(\ref{eq:henkei2})を用いて傾きを求め、その値から抵抗値の計算値と誤差を導出し整理したものを表\ref{tab:gosa}に表す。
-式(\ref{eq:hankei1})は横軸V、縦軸Aのときに成り立つ式であり、式(\ref{eq:henkei2})は横軸V、縦軸maのときに成り立つ式である。
+式(\ref{eq:henkei1})を用いて傾きを求め、その値から抵抗値の計算値と誤差を導出し整理したものを表\ref{tab:gosa}に表す。
 \begin{table}[htbp]
 	\centering
 	\caption{抵抗の誤差率}
@@ -490,14 +486,19 @@ N個すべてのデータが同じであると仮定したとき、平均値は�
 	\label{fig:r}
 \end{figure}
 
-\subsection{Cdsセンサの抵抗値と光強度の関係}
+\subsection{CdSセンサの抵抗値と光強度の関係}
+CdSセンサは、カドミウムと硫黄の化合物で構成されている。カドミウムの最外殻電子は、原子核との結合が弱く、自由電子となりやすい\cite{cds}。
+これに硫黄を結合させると、カドミウムの自由電子を硫黄原子が捕捉して絶縁体に変化する\cite{cds}。
+しかし、硫黄の自由電子の捕捉力は弱く、光が当て、エネルギーを与えると自由電子を放出して導体に変化する\cite{cds}。
+よって光の量によって放出する自由電子の量が変化し、抵抗値が変化することになる。
 実験3-3で得られた結果より、光をあてたときに電圧の変化に対して電流の変化が大きく、光をあてていないときは電圧の変化に対し電流の変化が小さいことがわかる。
-よって光強度が高ければ高いほど抵抗値は低くなる素子であると考えられる。
+以上のことより、実験結果が正しいことがわかる。
 
 \subsection{力センサの抵抗値と加える力の強さの関係}
+力センサは金属に力を加えたときのひずみによる抵抗値の変化を利用した素子である。力を加えると、センサ内部の導体の断面積が増加して抵抗値が減少し、力を加えないと導体の断面積が減少して抵抗値が増加する\cite{power}。
 実験3-4で得られた結果より、センサに力を加えているときは電圧と電流が比例の関係にあることがわかる。
 一方で力を加えていないときは電圧を変化させても電流が増加せず、ほぼ0であった。
-よって力センサは力を加えるほど電流を流す素子であると考えられる。
+以上のことより、実験結果が正しいことがわかる。
 
 \subsection{LEDの発光色と電圧電流特性の関係}
 本実験で使用したLEDの波長の長さは、短いほうから順に青、緑、赤である。白色は可視光を含むすべての光の波長がまんべんなく含まれている。
@@ -540,6 +541,8 @@ N個すべてのデータが同じであると仮定したとき、平均値は�
 \begin{thebibliography}{9}%参考文献数が10以上の場合は9を99に変更
 	%\bibitem{xxx}の引用を本文中で行うには\cite{xxx}と記述。
 	\bibitem{keisoku} 阿部武雄/村山実, 電気・電子計測第4版，森北出版，2019．
+	\bibitem{cds} ３分でわかる技術の超キホン CdSセルとは？原理と電子回路での使い方を解説！ \url{https://engineer-education.com/cds-cell/}
+	\bibitem{power} ひずみゲージ入門 \url{https://www.kyowa-ei.com/jpn/technical/strainbasic_course/index.html}
 \end{thebibliography}
 
 
