@@ -1,0 +1,23 @@
+# Fdb version 3
+["dvipdf"] 0 "out/report.dvi" "out/report.pdf" "out/report" 0
+  "out/report.dvi" 0 -1 0 "latex"
+  (generated)
+  "out/report.pdf"
+["latex"] 1656044974 "/root/Report_3/diode/report.tex" "out/report.dvi" "report" 1656044974
+  "/root/Report_3/diode/report.tex" 1656044955 8374 612c2113a1a33e959da13709755f009c ""
+  "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
+  "/usr/local/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/min10.tfm" 1463434352 1196 1be730212205a270378fba11a44765dc ""
+  "/usr/local/texlive/2022/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin10.tfm" 1463434352 856 39c171483fe1bb7d0e1368980c0c205b ""
+  "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmr10.tfm" 1136768653 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
+  "/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-dvipdfmx.def" 1650483921 30569 71b514e2d0946002a764e2ab07bb270c ""
+  "/usr/local/texlive/2022/texmf-dist/tex/platex/base/jarticle.cls" 1601501154 25873 fd34d08164a3ea7afd6bc7fe99629a3d ""
+  "/usr/local/texlive/2022/texmf-dist/tex/platex/base/jsize11.clo" 1601501154 8623 02e6f686ac653e2df9e7d43b25d5e482 ""
+  "/usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf" 1646502317 40171 cdab547de63d26590bebb3baff566530 ""
+  "/usr/local/texlive/2022/texmf-var/web2c/eptex/platex.fmt" 1656041384 2863500 86ce05ddee62f4bd11932de8e468d4e1 ""
+  "/usr/local/texlive/2022/texmf.cnf" 1656041370 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
+  "out/report.aux" 1656044974 8 a94a2480d3289e625eea47cd1b285758 "latex"
+  "report.tex" 1656044955 8374 612c2113a1a33e959da13709755f009c ""
+  (generated)
+  "out/report.aux"
+  "out/report.dvi"
+  "out/report.log"
