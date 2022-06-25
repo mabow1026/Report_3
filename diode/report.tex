@@ -1,6 +1,7 @@
 \documentclass[11pt,dvipdfmx]{jarticle}
 \usepackage{eee}
 \usepackage{subfig}
+\usepackage{here}
 
 \begin{document}
 % トップページを書く
@@ -122,6 +123,7 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 \subsubsection{使用機器}
 \begin{table}[htbp]
 	\centering
+	\caption{使用機器}
 	\begin{tabular}{llll}
 		\hline
 		名称   & 製造元      & 型番                   & 製造番号/管理番号       \\ \hline
@@ -131,7 +133,76 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 		電流計  & YOKOGAWA & MODEL 2011 CLASS 1.0 & B-5036.H1.10/10 \\ \hline
 	\end{tabular}
 \end{table}
+
 \subsubsection{結果}
+\begin{figure}[H]
+	\centering
+	\includegraphics[keepaspectratio, scale=0.8]{D1.pdf}
+	\caption{ダイオード特性(順バイアス)}
+	\label{fig:d1}
+\end{figure}
+\begin{table}[H]
+	\centering
+	\caption{順バイアスの電圧と電流の関係}
+	\begin{tabular}{ll}
+		\hline
+		電圧$V_\mathrm{D}\,[\mathrm{V}]$ & 電流$I_\mathrm{D}\,[\mathrm{mA}]$ \\ \hline
+		0                              & 0.00                            \\
+		0.1                            & 0.00                            \\
+		0.2                            & 0.00                            \\
+		0.3                            & 0.00                            \\
+		0.4                            & 0.00                            \\
+		0.5                            & 0.10                            \\
+		0.55                           & 0.32                            \\
+		0.575                          & 0.73                            \\
+		0.6                            & 1.21                            \\
+		0.625                          & 2.03                            \\
+		0.65                           & 4.50                            \\
+		0.675                          & 7.20                            \\
+		0.7                            & 12.00                           \\
+		0.705                          & 13.20                           \\
+		0.71                           & 14.90                           \\
+		0.715                          & 16.20                           \\
+		0.72                           & 17.90                           \\
+		0.725                          & 19.50                           \\
+		0.73                           & 21.30                           \\
+		0.735                          & 23.50                           \\
+		0.74                           & 24.90                           \\
+		0.745                          & 27.80                           \\
+		0.75                           & 30.90                           \\
+		0.775                          & 43.20                           \\
+		0.8                            & 59.80                           \\
+		0.755                          & 31.90                           \\
+		0.76                           & 34.10                           \\
+		0.765                          & 37.40                           \\
+		0.77                           & 40.00                           \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[keepaspectratio, scale=0.8]{D2.pdf}
+	\caption{ダイオード特性(逆バイアス)}
+	\label{fig:d2}
+\end{figure}
+\begin{table}[H]
+	\centering
+	\caption{逆バイアスの電圧と電流の関係}
+	\begin{tabular}{ll}
+		\hline
+		電圧$V_\mathrm{D}\,[\mathrm{V}]$ & 電流$I_\mathrm{D}\,[\mathrm{\mu A}]$ \\ \hline
+		0.0                            & 0.0                                \\
+		1.0                            & 0.0                                \\
+		2.0                            & 0.0                                \\
+		3.0                            & 0.0                                \\
+		4.0                            & 0.0                                \\
+		5.0                            & 0.0                                \\
+		6.0                            & 0.0                                \\
+		7.0                            & 0.0                                \\
+		8.0                            & 0.0                                \\ \hline
+	\end{tabular}
+\end{table}
+
 \subsubsection{考察}
 
 \subsection{ツェナーダイオードの特性}
@@ -139,6 +210,7 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 \subsubsection{使用機器}
 \begin{table}[htbp]
 	\centering
+	\caption{使用機器}
 	\begin{tabular}{llll}
 		\hline
 		名称   & 製造元      & 型番                  & 製造番号/管理番号     \\ \hline
@@ -148,7 +220,42 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 		電流計  & YOKOGAWA & TYPE 2011 CLASS 0.5 & B-6051.45.6/8 \\ \hline
 	\end{tabular}
 \end{table}
+
 \subsubsection{結果}
+\begin{figure}[H]
+	\centering
+	\includegraphics[keepaspectratio, scale=0.8]{ZD.pdf}
+	\caption{ツェナーダイオード特性}
+	\label{fig:zd}
+\end{figure}
+\begin{table}[H]
+	\centering
+	\caption{電源電圧$\,V_\mathrm{i}$, 電圧$\,V_\mathrm{L}$ と電流$\,I_\mathrm{Z}$の関係}
+	\begin{tabular}{lll}
+		\hline
+		電圧$V_\mathrm{i}\,[\mathrm{V}]$ & 電流$I_\mathrm{Z}\,[\mathrm{mA}]$ & 電圧$V_\mathrm{L}\,[\mathrm{V}]$ \\ \hline
+		0                              & 0.0                             & 0.00                           \\
+		1                              & 0.0                             & 0.75                           \\
+		2                              & 0.0                             & 1.50                           \\
+		3                              & 0.0                             & 2.30                           \\
+		4                              & 0.0                             & 3.00                           \\
+		5                              & 0.0                             & 3.80                           \\
+		6                              & 0.0                             & 4.50                           \\
+		7                              & 0.0                             & 5.30                           \\
+		8                              & 0.0                             & 6.05                           \\
+		9                              & 0.0                             & 6.80                           \\
+		10                             & 2.7                             & 7.00                           \\
+		11                             & 5.9                             & 7.01                           \\
+		12                             & 9.1                             & 7.05                           \\
+		13                             & 12.5                            & 7.10                           \\
+		14                             & 15.8                            & 7.11                           \\
+		15                             & 19.2                            & 7.15                           \\
+		16                             & 22.3                            & 7.19                           \\
+		17                             & 25.7                            & 7.20                           \\
+		18                             & 29.0                            & 7.25                           \\ \hline
+	\end{tabular}
+\end{table}
+
 \subsubsection{考察}
 
 \subsection{ツェナーダイオード定電圧回路}
@@ -156,6 +263,7 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 \subsubsection{使用機器}
 \begin{table}[htbp]
 	\centering
+	\caption{使用機器}
 	\begin{tabular}{llll}
 		\hline
 		名称   & 製造元      & 型番                  & 製造番号/管理番号       \\ \hline
@@ -166,7 +274,40 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 		摺動抵抗 & YOKOGAWA & 不明                  & B-2027.337.4/7  \\ \hline
 	\end{tabular}
 \end{table}
+
 \subsubsection{結果}
+\begin{figure}[H]
+	\centering
+	\includegraphics[keepaspectratio, scale=0.8]{const1.pdf}
+	\caption{電流$\,I_\mathrm{L}$ – 電流$\,I_\mathrm{Z}$特性}
+	\label{fig:const1}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[keepaspectratio, scale=0.8]{const2.pdf}
+	\caption{電流$\,V_\mathrm{L}$ – 電流$\,I_\mathrm{Z}$特性}
+	\label{fig:const2}
+\end{figure}
+\begin{table}[H]
+	\centering
+	\caption{定電圧回路の電圧と電流の関係}
+	\begin{tabular}{lll}
+		\hline
+		$電圧V_\mathrm{L}\,[\mathrm{V}]$ & $電流I_\mathrm{Z}\,[\mathrm{mA}]$ & $電流I_\mathrm{L}[\mathrm{mA}]$ \\ \hline
+		6.98                           & 2.0                             & 24.70                         \\
+		7.00                           & 4.0                             & 22.30                         \\
+		7.01                           & 6.0                             & 20.20                         \\
+		7.04                           & 8.0                             & 18.40                         \\
+		7.07                           & 10.0                            & 16.20                         \\
+		7.09                           & 12.0                            & 14.20                         \\
+		7.11                           & 14.0                            & 12.00                         \\
+		7.12                           & 16.0                            & 10.10                         \\
+		7.15                           & 18.0                            & 8.10                          \\
+		7.18                           & 20.0                            & 6.00                          \\
+		7.20                           & 22.0                            & 4.00                          \\ \hline
+	\end{tabular}
+\end{table}
+
 \subsubsection{考察}
 
 \subsection{太陽電池の発電特性}
