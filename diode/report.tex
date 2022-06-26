@@ -120,6 +120,16 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 \section{実験}
 \subsection{ダイオードの特性}
 \subsubsection{実験方法}
+本実験では，以下に示す手順で実験を行った。
+\begin{enumerate}[i)]
+	\item	図\ref{fig:for}の回路を作成した。このとき抵抗は$5\,\Omega$，ダイオードは1N4002を用いた。$5\,\Omega$の抵抗が不足していたため，$10\,\Omega$の抵抗を2並列にして使用した。
+	\item この回路に順バイアス$E$を加えた。このとき，$V_\mathrm{D}$を$0\,\mathrm{V}$から$0.8\, \mathrm{V}$まで$0.1\, \mathrm{V}$刻みで変化させ，それぞれ電圧$V_\mathrm{D}$と電流$I_\mathrm{D}$を計測した。
+	\item 計測した値より，$V_\mathrm{D}—I_\mathrm{D}$特性のグラフを作成した。
+	\item 図\ref{fig:rev}の回路を作成した。各受動素子の値は図\ref{fig:for}と同様である。
+	\item この回路に順バイアス$E$を加えた。このとき，$V_\mathrm{D}$を$0\,\mathrm{V}$から$8\, \mathrm{V}$まで$1\, \mathrm{V}$刻みで変化させ，それぞれ電圧$V_\mathrm{D}$と電流$I_\mathrm{D}$を計測した。
+	\item 計測した値より，$V_\mathrm{D}—I_\mathrm{D}$特性のグラフを作成した。
+\end{enumerate}
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[keepaspectratio, scale=0.5]{For.pdf}
@@ -134,9 +144,10 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 \end{figure}
 
 \subsubsection{使用機器}
-\begin{table}[htbp]
+本実験で使用した使用機器を表\ref{tab:kiki1}に示す。
+\begin{table}[H]
 	\centering
-	\caption{使用機器}
+	\caption{ダイオード特性実験の使用機器}
 	\begin{tabular}{llll}
 		\hline
 		名称   & 製造元      & 型番                   & 製造番号/管理番号       \\ \hline
@@ -145,80 +156,105 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 		電流計  & YOKOGAWA & TYPE 2011 CLASS 0.5  & B-6051.45.6/8   \\
 		電流計  & YOKOGAWA & MODEL 2011 CLASS 1.0 & B-5036.H1.10/10 \\ \hline
 	\end{tabular}
+	\label{tab:kiki1}
 \end{table}
 
 \subsubsection{結果}
-\begin{figure}[H]
-	\centering
-	\includegraphics[keepaspectratio, scale=0.8]{D1.pdf}
-	\caption{ダイオード特性(順バイアス)}
-	\label{fig:d1}
-\end{figure}
-\begin{table}[H]
-	\centering
-	\caption{順バイアスの電圧と電流の関係}
-	\begin{tabular}{ll}
-		\hline
-		電圧$V_\mathrm{D}\,[\mathrm{V}]$ & 電流$I_\mathrm{D}\,[\mathrm{mA}]$ \\ \hline
-		0                              & 0.00                            \\
-		0.1                            & 0.00                            \\
-		0.2                            & 0.00                            \\
-		0.3                            & 0.00                            \\
-		0.4                            & 0.00                            \\
-		0.5                            & 0.10                            \\
-		0.55                           & 0.32                            \\
-		0.575                          & 0.73                            \\
-		0.6                            & 1.21                            \\
-		0.625                          & 2.03                            \\
-		0.65                           & 4.50                            \\
-		0.675                          & 7.20                            \\
-		0.7                            & 12.00                           \\
-		0.705                          & 13.20                           \\
-		0.71                           & 14.90                           \\
-		0.715                          & 16.20                           \\
-		0.72                           & 17.90                           \\
-		0.725                          & 19.50                           \\
-		0.73                           & 21.30                           \\
-		0.735                          & 23.50                           \\
-		0.74                           & 24.90                           \\
-		0.745                          & 27.80                           \\
-		0.75                           & 30.90                           \\
-		0.775                          & 43.20                           \\
-		0.8                            & 59.80                           \\
-		0.755                          & 31.90                           \\
-		0.76                           & 34.10                           \\
-		0.765                          & 37.40                           \\
-		0.77                           & 40.00                           \\ \hline
-	\end{tabular}
-\end{table}
+\begin{enumerate}[i)]
+	\item 順バイアス\\
+	      計測した$V_\mathrm{D}$と$I_\mathrm{D}$を表\ref{tab:d1}に示す。また，この値をグラフに描画したものを図\ref{fig:d1}に示す。
+	      \begin{figure}[H]
+		      \centering
+		      \includegraphics[keepaspectratio, scale=0.8]{D1.pdf}
+		      \caption{ダイオード特性(順バイアス)}
+		      \label{fig:d1}
+	      \end{figure}
+	      \begin{table}[H]
+		      \centering
+		      \caption{順バイアスの電圧と電流の関係}
+		      \begin{tabular}{ll}
+			      \hline
+			      電圧$V_\mathrm{D}\,[\mathrm{V}]$ & 電流$I_\mathrm{D}\,[\mathrm{mA}]$ \\ \hline
+			      0                              & 0.00                            \\
+			      0.1                            & 0.00                            \\
+			      0.2                            & 0.00                            \\
+			      0.3                            & 0.00                            \\
+			      0.4                            & 0.00                            \\
+			      0.5                            & 0.10                            \\
+			      0.55                           & 0.32                            \\
+			      0.575                          & 0.73                            \\
+			      0.6                            & 1.21                            \\
+			      0.625                          & 2.03                            \\
+			      0.65                           & 4.50                            \\
+			      0.675                          & 7.20                            \\
+			      0.7                            & 12.00                           \\
+			      0.705                          & 13.20                           \\
+			      0.71                           & 14.90                           \\
+			      0.715                          & 16.20                           \\
+			      0.72                           & 17.90                           \\
+			      0.725                          & 19.50                           \\
+			      0.73                           & 21.30                           \\
+			      0.735                          & 23.50                           \\
+			      0.74                           & 24.90                           \\
+			      0.745                          & 27.80                           \\
+			      0.75                           & 30.90                           \\
+			      0.775                          & 43.20                           \\
+			      0.8                            & 59.80                           \\
+			      0.755                          & 31.90                           \\
+			      0.76                           & 34.10                           \\
+			      0.765                          & 37.40                           \\
+			      0.77                           & 40.00                           \\ \hline
+		      \end{tabular}
+		      \label{tab:d1}
+	      \end{table}
+	      \ref{fig:d1}より，$V_\mathrm{D}$が$0.4\,\mathrm{V}$までは$I_\mathrm{D}$は$0\, \mathrm{mA}$であったが，$0.6\,\mathrm{V}$を超えると$I_\mathrm{D}$が急激に増加していることがわかる。
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[keepaspectratio, scale=0.8]{D2.pdf}
-	\caption{ダイオード特性(逆バイアス)}
-	\label{fig:d2}
-\end{figure}
-\begin{table}[H]
-	\centering
-	\caption{逆バイアスの電圧と電流の関係}
-	\begin{tabular}{ll}
-		\hline
-		電圧$V_\mathrm{D}\,[\mathrm{V}]$ & 電流$I_\mathrm{D}\,[\mathrm{\mu A}]$ \\ \hline
-		0.0                            & 0.0                                \\
-		1.0                            & 0.0                                \\
-		2.0                            & 0.0                                \\
-		3.0                            & 0.0                                \\
-		4.0                            & 0.0                                \\
-		5.0                            & 0.0                                \\
-		6.0                            & 0.0                                \\
-		7.0                            & 0.0                                \\
-		8.0                            & 0.0                                \\ \hline
-	\end{tabular}
-\end{table}
+	\item 逆バイアス\\
+	      計測した$V_\mathrm{D}$と$I_\mathrm{D}$を表\ref{tab:d2}に示す。また，この値をグラフに描画したものを図\ref{fig:d2}に示す。
+	      \begin{figure}[H]
+		      \centering
+		      \includegraphics[keepaspectratio, scale=0.8]{D2.pdf}
+		      \caption{ダイオード特性(逆バイアス)}
+		      \label{fig:d2}
+	      \end{figure}
+	      \begin{table}[H]
+		      \centering
+		      \caption{逆バイアスの電圧と電流の関係}
+		      \begin{tabular}{ll}
+			      \hline
+			      電圧$V_\mathrm{D}\,[\mathrm{V}]$ & 電流$I_\mathrm{D}\,[\mathrm{\mu A}]$ \\ \hline
+			      0.0                            & 0.0                                \\
+			      1.0                            & 0.0                                \\
+			      2.0                            & 0.0                                \\
+			      3.0                            & 0.0                                \\
+			      4.0                            & 0.0                                \\
+			      5.0                            & 0.0                                \\
+			      6.0                            & 0.0                                \\
+			      7.0                            & 0.0                                \\
+			      8.0                            & 0.0                                \\ \hline
+		      \end{tabular}
+		      \label{tab:d2}
+	      \end{table}
+	      計測結果より，電圧$V_\mathrm{D}$が$8\,\mathrm{V}$までは電流$I_\mathrm{D}$が$0\,\mathrm{\mu A}$から変化しないことがわかる。
+\end{enumerate}
+
 \subsubsection{考察}
+\begin{enumerate}[i)]
+	\item 直流電圧電流特性を図　に示す。
+	\item 逆方向電圧値
+\end{enumerate}
+\newpage
 
 \subsection{ツェナーダイオードの特性}
 \subsubsection{実験方法}
+本実験では，以下に示す手順で実験を行った。
+\begin{enumerate}[i)]
+	\item	図\ref{fig:for}の回路を作成した。このとき抵抗は$300\,\Omega$，ダイオードは1N4736を用いた
+	\item この回路に順バイアス$E$を加えた。このとき，$V_\mathrm{D}$を$0\,\mathrm{V}$から$0.8\, \mathrm{V}$まで$0.1\, \mathrm{V}$刻みで変化させ，それぞれ電圧$V_\mathrm{D}$と電流$I_\mathrm{D}$を計測した。
+	\item 計測した値より，$V_\mathrm{D}—I_\mathrm{D}$特性のグラフを作成した。
+\end{enumerate}
+
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[keepaspectratio, scale=0.5]{zener.pdf}
@@ -227,7 +263,8 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 \end{figure}
 
 \subsubsection{使用機器}
-\begin{table}[htbp]
+本実験で使用した使用機器を表\ref{tab:kiki2}に示す。
+\begin{table}[H]
 	\centering
 	\caption{使用機器}
 	\begin{tabular}{llll}
@@ -238,9 +275,11 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 		電圧計  & YOKOGAWA & TYPE 2051 CLASS 1.0 & B-3037.50.1/6 \\
 		電流計  & YOKOGAWA & TYPE 2011 CLASS 0.5 & B-6051.45.6/8 \\ \hline
 	\end{tabular}
+	\label{tab:kiki2}
 \end{table}
 
 \subsubsection{結果}
+計測した電圧$V_\mathrm{i}$と電流$I_\mathrm{Z}$を表\ref{tab:zd}に示す。また，この値をグラフに描画したものを図\ref{fig:zd}に示す。
 \begin{figure}[H]
 	\centering
 	\includegraphics[keepaspectratio, scale=0.8]{ZD.pdf}
@@ -273,13 +312,21 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 		17                             & 25.7                            & 7.20                           \\
 		18                             & 29.0                            & 7.25                           \\ \hline
 	\end{tabular}
+	\label{tab:zd}
 \end{table}
-
+計測結果より，電圧$V_\mathrm{L}$は$V_\mathrm{i}$が$9.0\,\mathrm{V}$付近までは急激に増加するが，$9.0\, \mathrm{V}$を超えると変化が小さくなっていることがわかる。
+一方，電流$I_\mathrm{Z}$は$V_\mathrm{L}$が$9.0\, \mathrm{V}$付近までは$0\,\mathrm{mA}$であったが，$9.0\, \mathrm{V}$を超えると急激に増加した。
 \subsubsection{考察}
 
 
 \subsection{ツェナーダイオード定電圧回路}
 \subsubsection{実験方法}
+本実験では，以下に示す手順で実験を行った。
+\begin{enumerate}[i)]
+	\item	図\ref{fig:for}の回路を作成した。このとき抵抗$R$は$300\,\Omega$，抵抗$R_\mathrm{L}$は可変抵抗，ダイオードは1N4736を用いた
+	\item この回路に電圧$V_\mathrm{i}=15\,\mathrm{V}$を印加した。このとき，可変抵抗$R_\mathrm{L}$を変化させ，$2\,\mathrm{mA}$から$22\, \mathrm{mA}$まで$0.1\, \mathrm{mA}$刻みで変化させた。それぞれ電圧$V_\mathrm{D}$と電流$I_\mathrm{D}$を計測した。
+	\item 計測した値より，$V_\mathrm{L} — I_\mathrm{Z}$特性と$I_\mathrm{L} — I_\mathrm{Z}$特性のグラフを作成した。
+\end{enumerate}
 \begin{figure}[H]
 	\centering
 	\includegraphics[keepaspectratio, scale=0.5]{const.pdf}
@@ -303,16 +350,17 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 \end{table}
 
 \subsubsection{結果}
+計測した電圧$V_\mathrm{L}$と電流$I_\mathrm{L}$を図\ref{tab:const}に示す。また，この値をグラフに描画したものを図\ref{fig:const1}，図\ref{fig:const2}に示す。
 \begin{figure}[H]
 	\centering
 	\includegraphics[keepaspectratio, scale=0.8]{const1.pdf}
-	\caption{電流$\,I_\mathrm{L}$ – 電流$\,I_\mathrm{Z}$特性}
+	\caption{電流$\,I_\mathrm{L}$ — 電流$\,I_\mathrm{Z}$特性}
 	\label{fig:const1}
 \end{figure}
 \begin{figure}[H]
 	\centering
 	\includegraphics[keepaspectratio, scale=0.8]{const2.pdf}
-	\caption{電流$\,V_\mathrm{L}$ – 電流$\,I_\mathrm{Z}$特性}
+	\caption{電流$\,V_\mathrm{L}$ — 電流$\,I_\mathrm{Z}$特性}
 	\label{fig:const2}
 \end{figure}
 \begin{table}[H]
@@ -333,7 +381,9 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 		7.18                           & 20.0                            & 6.00                          \\
 		7.20                           & 22.0                            & 4.00                          \\ \hline
 	\end{tabular}
+	\label{tab:const}
 \end{table}
+計測結果より電流$I_\mathrm{Z}$が増加しても電圧$V_\mathrm{L}$はほぼ変化しないのに対し，$I_\mathrm{Z}$が増加すると電流$I_\mathrm{L}$が減少する関係にあることがわかる。
 
 \subsubsection{考察}
 
