@@ -2,6 +2,7 @@
 \usepackage{eee}
 \usepackage{subfig}
 \usepackage{here}
+\usepackage{url}
 
 \begin{document}
 % トップページを書く
@@ -262,7 +263,7 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 	      また，抵抗$r_\mathrm{D}$は立ち上がり電圧からの電流の変化が緩やかになる要因とも考えることができる。
 
 	\item 逆方向電圧値
-	      本実験で使用したダイオードのデータシートを参照すると，$25\,\mathrm{^\circ C}$のときの逆電流は$0.05\,\mu A$，$100{^\circ C}$のときは$1.0\,\mu A$であった。
+	      本実験で使用したダイオードのデータシートを参照すると，$25\,\mathrm{^\circ C}$のときの逆電流は$0.05\,\mu A$，$100{^\circ C}$のときは$1.0\,\mu A$であった\cite{d}。
 	      ダイオードに逆バイアスを印加したときに，わずかに電流が流れるのは接合部付近の空乏層が原因であると考えられる。
 	      逆バイアスをダイオードに印加すると，
 \end{enumerate}
@@ -340,6 +341,9 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 計測結果より，電圧$V_\mathrm{L}$は$V_\mathrm{i}$が$9.0\,\mathrm{V}$付近までは急激に増加するが，$9.0\, \mathrm{V}$を超えると変化が小さくなっていることがわかる。
 一方，電流$I_\mathrm{Z}$は$V_\mathrm{L}$が$9.0\, \mathrm{V}$付近までは$0\,\mathrm{mA}$であったが，$9.0\, \mathrm{V}$を超えると急激に増加した。
 \subsubsection{考察}
+\begin{enumerate}[i)]
+	\item ツェナーダイオードの規格と計測結果の比較
+\end{enumerate}
 
 
 \subsection{ツェナーダイオード定電圧回路}
@@ -421,7 +425,7 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 
 \begin{thebibliography}{9}%参考文献数が10以上の場合は9を99に変更
 	%\bibitem{xxx}の引用を本文中で行うには\cite{xxx}と記述。
-	\bibitem{a} 著者名, 書名，出版社，発行年．
+	\bibitem{d} Semiconductor Components Industries LLC, `` Axial-Lead Glass Passivated Standard Recovery Rectifiers'', \url{https://www.onsemi.jp/pdf/datasheet/1n4001-d.pdf}, 閲覧日 2021年6月27日．
 \end{thebibliography}
 
 
