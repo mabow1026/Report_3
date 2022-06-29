@@ -439,17 +439,16 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 計測結果より電流$I_\mathrm{Z}$が増加しても電圧$V_\mathrm{L}$はほぼ変化しないのに対し，$I_\mathrm{Z}$が増加すると電流$I_\mathrm{L}$が減少する関係にあることがわかる。
 
 \subsubsection{考察}
-\begin{enumerate}
+\begin{enumerate}[i)]
 	\item $R_\mathrm{L}$, $R_\mathrm{Z}$及び合成抵抗$R_\mathrm{A}$の導出
-	      図　を参考に$R_\mathrm{L}$と$R_\mathrm{Z}$から合成抵抗$R_\mathrm{A}$を求める。
 	      $R_\mathrm{L}$, $R_\mathrm{Z}$及び$R_\mathrm{A}$は，次に示す式を用いて導出した。
 	      \begin{align}
 		      \label{eq:rl}
-		      R_\mathrm{L} = \frac{V_\mathrm{L}}{I_\mathrm{L}}                                    \\
+		      R_\mathrm{L} = \frac{V_\mathrm{L}}{I_\mathrm{L}} \\
 		      \label{eq:rz}
-		      R_\mathrm{Z} = \frac{V_\mathrm{L}}{I_\mathrm{Z}}                                    \\
+		      R_\mathrm{Z} = \frac{V_\mathrm{L}}{I_\mathrm{Z}} \\
 		      \label{eq:ra}
-		      R_\mathrm{A} = \frac{R_\mathrm{L} \times R_\mathrm{Z}}{R_\mathrm{L} + R_\mathrm{Z}} \\
+		      R_\mathrm{A} = \frac{R_\mathrm{L} \times R_\mathrm{Z}}{R_\mathrm{L} + R_\mathrm{Z}}
 	      \end{align}
 	      式(\ref{eq:rl})，式(\ref{eq:rz})，式(\ref{eq:ra})より導出した値を表\ref{tab:ra}に示す。
 	      可変抵抗$R_\mathrm{L}$を変化させると，合成抵抗$R_\mathrm{A}$が$0.27\,\mathrm{k\Omega}$程度になるよう抵抗$R_\mathrm{Z}$も変化していることがわかる。
@@ -474,12 +473,16 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 		      \label{tab:ra}
 	      \end{table}
 	\item $I_\mathrm{Z} - R_\mathrm{L}$特性，$I_\mathrm{Z} - R_\mathrm{Z}$特性の考察
+	      抵抗$R$にかかる電圧は，入力電圧からツェナー電圧を引いた$V_\mathrm{i} - V_\mathrm{Z}$となる。よって抵抗$R$に流れる電流＝回路全体に流れる電流は一定である。
+	      この電流はツェナーダイオード$ZD$と抵抗$R_L$に分流されるが，ツェナーダイオードは流れる電流が変化しても同じツェナー電圧を発生するので，$R_\mathrm{L}$の電流が変化しても出力電圧は不変である。
+	      また，図\ref{fig:rlrz}に可変抵抗特性とツェナー抵抗特性を示す。
+	      この図より，電流$I_\mathrm{Z}$が増加すると抵抗$R_\mathrm{Z}$は増加し，抵抗$R_\mathrm{L}$が減少する反比例の関係にあることがわかる。
 
 	      \begin{figure}[H]
 		      \centering
 		      \includegraphics[keepaspectratio, scale=0.8]{ra.pdf}
 		      \caption{可変抵抗特性とツェナー抵抗特性}
-		      \label{fig:ra}
+		      \label{fig:rlrz}
 	      \end{figure}
 \end{enumerate}
 
