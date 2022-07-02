@@ -367,8 +367,6 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 	      \ref{fig:zd}より電圧$V_\mathrm{L}$が増加している区間ではツェナー電流$I_\mathrm{Z}$は増加していない。
 	      一方で，ツェナー電流$I_\mathrm{Z}$が増加している区間では電圧$V_\mathrm{L}$は増加していない。
 	      よってツェナーダイオードは，出力電圧とツェナー電圧は同時に増加しないような素子であると考えられる。
-
-
 \end{enumerate}
 
 
@@ -388,6 +386,7 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 \end{figure}
 
 \subsubsection{使用機器}
+本実験で使用した機器を表\ref{tab:kiki3}に示す。
 \begin{table}[htbp]
 	\centering
 	\caption{使用機器}
@@ -400,6 +399,7 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 		電流計  & YOKOGAWA & TYPE 2011 CLASS 0.5 & B-6051.45.6/8   \\
 		摺動抵抗 & YOKOGAWA & 不明                  & B-2027.337.4/7  \\ \hline
 	\end{tabular}
+	\label{tab:kiki3}
 \end{table}
 
 \subsubsection{結果}
@@ -477,7 +477,6 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 	      この電流はツェナーダイオード$ZD$と抵抗$R_L$に分流されるが，ツェナーダイオードは流れる電流が変化しても同じツェナー電圧を発生するので，$R_\mathrm{L}$の電流が変化しても出力電圧は不変である。
 	      また，図\ref{fig:rlrz}に可変抵抗特性とツェナー抵抗特性を示す。
 	      この図より，電流$I_\mathrm{Z}$が増加すると抵抗$R_\mathrm{Z}$は増加し，抵抗$R_\mathrm{L}$が減少する反比例の関係にあることがわかる。
-
 	      \begin{figure}[H]
 		      \centering
 		      \includegraphics[keepaspectratio, scale=0.8]{ra.pdf}
@@ -485,15 +484,63 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 		      \label{fig:rlrz}
 	      \end{figure}
 \end{enumerate}
-
-
-
-
+\newpage
 
 \subsection{太陽電池の発電特性}
 \subsubsection{実験方法}
+本実験では，以下に示す手順で実験を行った。
+\begin{enumerate}[i)]
+	\item 図\ref{fig:taiyo}の回路を作成した。
+	\item ライトの光が太陽電池に均等に当たる位置に置く。このとき，電流計を見ながら値が最大になる位置に置いた。
+	\item	 ライトを一つのみ点灯させ，太陽電池の四つ角と中央の照度を測定した。
+	\item 太陽電池の裏面に熱電対を取付け，温度計の値を確認しながら太陽電池の温度が目標の温度になるようにサーキュレーターや濡らした布巾を用いて調節した。\label{sec:goto1}
+	\item 目標温度に到達したら可変抵抗を変化させ，電圧$V$と電流$I$を測定した。
+	\item 測定中に太陽電池の温度が目標温度から外れた場合は\ref{sec:goto1})を再び行う。
+	\item 点灯させるライトの数と目標温度を変化させて同様に４条件で計測した。
+\end{enumerate}
+\begin{figure}[H]
+	\centering
+	\includegraphics[keepaspectratio, scale=0.5]{taiyo.pdf}
+	\caption{太陽電池の発電実験}
+	\label{fig:taiyo}
+\end{figure}
+\newpage
+
 \subsubsection{使用機器}
+本実験で使用した機器を表\ref{tab:kiki4}に示す。
+\begin{table}[htbp]
+	\centering
+	\caption{使用機器}
+	\begin{tabular}{llll}
+		\hline
+		名称         & 製造元                         & 型番                & 製造番号/管理番号                 \\ \hline
+		デジタルマルチメータ & OWON                        & B35               & B351517853                \\
+		デジタルマルチメータ & OWON                        & $\mathrm{B35T^+}$ & B35T+20210545             \\
+		照度計        & Zhangzhou Weihua Electronic & LX-1010B          & T428585                   \\
+		温度計        & KKmoon                      & TL-TK04           & 202019031                 \\
+		太陽光パネル     & SUNYO                       & SY-M5W            & SYM1562111200520160211423 \\
+		サーキュレーター   & C:NET                       & CCM101BK          & C16018206                 \\
+		屋外作業灯      & HATAYA                      & RY-500            & KN09361                   \\
+		屋外作業灯      & HATAYA                      & RY-500            & 28CP03889                 \\
+		摺動抵抗器      & TOKUSHU DENKI               & TYPE S-3          & NO.3201/B-2027.37.4/7     \\ \hline
+	\end{tabular}
+	\label{tab:kiki4}
+\end{table}
+
 \subsubsection{結果}
+\begin{figure}[H]
+	\centering
+	\includegraphics[keepaspectratio, scale=0.8]{taiyo1.pdf}
+	\caption{太陽電池の発電実験}
+	\label{fig:taiyo1}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[keepaspectratio, scale=0.8]{taiyo2.pdf}
+	\caption{太陽電池の発電実験}
+	\label{fig:taiyo2}
+\end{figure}
+
 \subsubsection{考察}
 
 \section{結論}
