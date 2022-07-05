@@ -534,12 +534,57 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 	\caption{太陽電池の発電実験}
 	\label{fig:taiyo1}
 \end{figure}
+
+\begin{table}[H]
+	\centering
+	\caption{各条件の電圧と電流の計測結果}
+	\begin{tabular}{|llll|llll|}
+		\hline
+		\multicolumn{4}{|l|}{ライト一個} & \multicolumn{4}{l|}{ライト二個}                                                                                                                                   \\ \hline
+		\multicolumn{2}{|l|}{30℃}   & \multicolumn{2}{l|}{50℃}        & \multicolumn{2}{l|}{30℃} & \multicolumn{2}{l|}{50℃}                                                                        \\ \hline
+		電圧{[}V{]}                   & \multicolumn{1}{l|}{電流{[}mA{]}} & 電圧{[}V{]}                & 電流{[}mA{]}               & 電圧{[}V{]} & \multicolumn{1}{l|}{電流{[}mA{]}} & 電圧{[}V{]} & 電流{[}mA{]} \\ \hline
+		0.01                        & \multicolumn{1}{l|}{59.45}      & 0.05                     & 59.46                    & 0.01      & \multicolumn{1}{l|}{121.60}     & 0.11      & 126.70     \\
+		5.08                        & \multicolumn{1}{l|}{58.15}      & 5.68                     & 58.42                    & 3.23      & \multicolumn{1}{l|}{120.00}     & 2.17      & 126.00     \\
+		8.38                        & \multicolumn{1}{l|}{58.15}      & 7.57                     & 57.92                    & 10.56     & \multicolumn{1}{l|}{119.20}     & 5.10      & 124.70     \\
+		10.38                       & \multicolumn{1}{l|}{58.30}      & 10.75                    & 57.99                    & 15.33     & \multicolumn{1}{l|}{117.50}     & 7.58      & 123.50     \\
+		13.06                       & \multicolumn{1}{l|}{56.97}      & 13.89                    & 57.33                    & 17.00     & \multicolumn{1}{l|}{116.50}     & 10.15     & 123.00     \\
+		14.22                       & \multicolumn{1}{l|}{56.70}      & 15.13                    & 57.46                    & 18.30     & \multicolumn{1}{l|}{116.00}     & 12.65     & 122.10     \\
+		14.86                       & \multicolumn{1}{l|}{55.80}      & 16.48                    & 54.30                    & 18.80     & \multicolumn{1}{l|}{115.10}     & 14.89     & 122.30     \\
+		16.00                       & \multicolumn{1}{l|}{55.83}      & 17.20                    & 47.83                    & 19.32     & \multicolumn{1}{l|}{111.80}     & 16.75     & 119.90     \\
+		16.84                       & \multicolumn{1}{l|}{55.50}      & 17.51                    & 43.87                    & 19.72     & \multicolumn{1}{l|}{98.50}      & 17.48     & 119.80     \\
+		17.75                       & \multicolumn{1}{l|}{52.53}      & 18.10                    & 31.22                    & 19.95     & \multicolumn{1}{l|}{81.30}      & 18.03     & 116.20     \\
+		18.30                       & \multicolumn{1}{l|}{48.45}      & 18.50                    & 18.56                    & 20.26     & \multicolumn{1}{l|}{73.50}      & 18.43     & 105.10     \\
+		18.50                       & \multicolumn{1}{l|}{43.86}      & 18.73                    & 9.85                     & 20.38     & \multicolumn{1}{l|}{68.60}      & 18.50     & 103.60     \\
+		18.79                       & \multicolumn{1}{l|}{39.94}      & 18.89                    & 6.53                     & 20.50     & \multicolumn{1}{l|}{45.47}      & 18.62     & 99.30      \\
+		19.00                       & \multicolumn{1}{l|}{34.76}      & 19.11                    & 0.01                     & 20.90     & \multicolumn{1}{l|}{9.43}       & 18.84     & 89.00      \\
+		19.50                       & \multicolumn{1}{l|}{22.26}      & 19.21                    & 0.00                     & 21.15     & \multicolumn{1}{l|}{7.56}       & 19.00     & 81.60      \\
+		19.80                       & \multicolumn{1}{l|}{10.03}      &                          &                          & 21.51     & \multicolumn{1}{l|}{0.00}       & 19.21     & 68.40      \\
+		19.89                       & \multicolumn{1}{l|}{6.25}       &                          &                          &           & \multicolumn{1}{l|}{}           & 19.41     & 53.73      \\
+		19.93                       & \multicolumn{1}{l|}{7.95}       &                          &                          &           & \multicolumn{1}{l|}{}           & 19.59     & 37.96      \\
+		20.25                       & \multicolumn{1}{l|}{0.01}       &                          &                          &           & \multicolumn{1}{l|}{}           & 19.80     & 19.85      \\
+		20.36                       & \multicolumn{1}{l|}{0.00}       &                          &                          &           & \multicolumn{1}{l|}{}           & 20.23     & 0.00       \\ \hline
+	\end{tabular}
+\end{table}
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[keepaspectratio, scale=0.8]{taiyo2.pdf}
 	\caption{太陽電池の発電実験}
 	\label{fig:taiyo2}
 \end{figure}
+\begin{table}[H]
+	\centering
+	\caption{各実験条件の電力最大点}
+	\begin{tabular}{lll}
+		\hline
+		実験条件     & 電圧$V\,[\mathrm{V}]$ & 電力$P_\mathrm{MAX}\,[\mathrm{W}]$ \\ \hline
+		ライト一個30℃ & 16.84               & 0.93                             \\
+		ライト一個50℃ & 18.80               & 2.16                             \\
+		ライト二個30℃ & 16.47               & 0.89                             \\
+		ライト二個50℃ & 17.75               & 2.10                             \\ \hline
+	\end{tabular}
+\end{table}
+
 
 \subsubsection{考察}
 
