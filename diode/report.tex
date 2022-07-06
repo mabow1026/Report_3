@@ -588,6 +588,10 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 \subsubsection{考察}
 \begin{enumerate}[i)]
 	\item 各条件下における電流電圧特性の測定結果を用いた電力の算出
+	      表\ref{tab:taiyo}から電力を算出し，その値をグラフに描画したものを図\ref{fig:taiyo2}に示す。また，核実験条件における最大電力点を表に整理したものを表\ref{tab:max}に示す。
+	      表\ref{tab:max}と図\ref{fig:taiyo2}より，目標温度が$30\,\mathrm{^\circ C}$の場合はライトの数に関わらず$18\,\mathrm{V}$付近が電力が最も大きいことがわかる。
+	      また，目標温度が$50\,\mathrm{^\circ C}$の場合は，ライトの数に関わらず$16\,\mathrm{V}$付近が最も電力が沖いことがわかる。
+	      以上の事実より，太陽電池の温度が低いかつ照度が高い場合に最大電力は大きくなり，温度が高いかつ照度が低い場合に最大電力が小さくなることがわかった。
 	      \begin{figure}[H]
 		      \centering
 		      \includegraphics[keepaspectratio, scale=0.8]{taiyo2.pdf}
@@ -605,8 +609,16 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 			      ライト二個30℃ & 16.47               & 0.89                             \\
 			      ライト二個50℃ & 17.75               & 2.10                             \\ \hline
 		      \end{tabular}
+		      \label{tab:max}
 	      \end{table}
-	\item MMPT制御が必要とされる理由
+	      太陽電池は，太陽の光エネルギーを吸収して直接電気に変えるエネルギー変換素子である\cite{taiyo}。
+	      シリコンや化合物などの半導体で作られており、この半導体に光が当たると、日射強度に比例して発電する\cite{taiyo}。
+	      シリコンなどの半導体の温度が上昇すると，結晶格子間隔（格子定数）が伸びることでバンドギャップ（禁制帯幅）が狭くなる。バンドギャップが狭くなると出力電圧が低下し，発電効率が落ちてしまう。\cite{ondo}。
+	      このことから，目標温度がが高い場合は同じ照度でも最大電力が小さかったと考えることができる。
+	\item MPPT制御が必要とされる理由
+	      MPPT制御とは，和名に直すと最大電力店追従制御である。名前の通り，気象条件で変化する気温や照度に合わせて最適な動作点に追従する制御のことである。
+	      このMPPT制御のアルゴリズムには，山登り法と電圧追従法の二通りがあり，次に紹介する。
+	      山登り法は，電圧をある一方向に変化させていき，電力が増加から現象に転換すると電圧を変化させる
 \end{enumerate}
 
 
@@ -625,7 +637,10 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 	\bibitem{zd} Semiconductor Components Industried LLC, ``1N4728A - 1N4758A Zener Diodes'', \url{https://rocelec.widen.net/view/pdf/7qfz7dzkx8/ONSM-S-A0003585147-1.pdf?t.download=true&u=5oefqw}, 閲覧日 2022年6月27日.
 	\bibitem{rohm} ROHM Co., Ltd., ``ツェナーダイオード（定電圧ダイオード）'', \url{https://www.rohm.co.jp/electronics-basics/diodes/di_what6}, 閲覧日 2022年6月28日.
 	\bibitem{revd} 甲南大学, ``半導体/電子デバイス物理'', \url{http://kccn.konan-u.ac.jp/physics/semiconductor/basic/2_6.html}, 閲覧日 2022年6月28日.
+	\bibitem{taiyo} 太陽光発電協会, ``太陽光発電の基礎知識について'', \url{https://www.jpea.gr.jp/knowledge/about/}, 閲覧日 2022年7月5日.
+	\bibitem{ondo} コベルコビジネスパートナーズ株式会社, ``結晶シリコン太陽電池による発電の実際'', \url{https://www.src-kobelco.co.jp/517-2/}, 閲覧日 2022年7月5日.
 \end{thebibliography}
+
 
 
 \end{document}
