@@ -241,7 +241,8 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 
 \subsubsection{考察}
 \begin{enumerate}[i)]
-	\item 直流電圧電流特性を図\ref{fig:tokusei}に示す。この図は図\ref{fig:d2}に$E_\mathrm{Vp}$を$0.8\,\mathrm{V}$としたときの負荷線を加えたものである。
+	\item 直流電圧電流特性\\
+	      直流電圧電流特性を図\ref{fig:tokusei}に示す。この図は図\ref{fig:d2}に$E_\mathrm{Vp}$を$0.8\,\mathrm{V}$としたときの負荷線を加えたものである。
 	      動作点$P$の微分抵抗$r_\mathrm{d}$は次の式で表される。
 	      \begin{align}
 		      \label{eq:teiko}
@@ -268,7 +269,7 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 	      一方で電圧源よりもダイオードの内部電圧源よりも小さい場合は，ダイオードに電流は流れない回路と考えられる。
 	      また，抵抗$r_\mathrm{D}$は立ち上がり電圧からの電流の変化が緩やかになる要因とも考えることができる。
 
-	\item 逆方向電圧値
+	\item 逆方向電圧値\\
 	      本実験で使用したダイオードのデータシートを参照すると，$25\,\mathrm{^\circ C}$のときの逆電流は$0.05\,\mathrm{\mu A}$，$100\,\mathrm{^\circ C}$のときは$1.0\,\mathrm{\mu A}$であった\cite{d}。
 	      ダイオードに逆バイアスを印加したときに，わずかに電流が流れるのは接合部付近の空乏層が原因であると考えられる。
 	      逆バイアスをダイオードに印加すると，禁制帯が狭くなり，充満帯の電子がトンネル効果で伝導体に移動する現象が起きる。
@@ -349,21 +350,21 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 一方，電流$I_\mathrm{Z}$は$V_\mathrm{L}$が$9.0\, \mathrm{V}$付近までは$0\,\mathrm{mA}$であったが，$9.0\, \mathrm{V}$を超えると急激に増加した。
 \subsubsection{考察}
 \begin{enumerate}[i)]
-	\item ツェナーダイオードの公称値と計測結果の比較
+	\item ツェナーダイオードの公称値と計測結果の比較\\
 	      本実験で使用したツェナーダイオード1N4736Aは，立ち上がり電圧$V_\mathrm{Z}$は$6.8\,\mathrm{V}$で，公称誤差が$5\%$であった\cite{zd}。
 	      実験の計測で得られた立ち上がり電圧は約$7.0\,\mathrm{V}$であり，データシートの公称値の範囲であることがわかる。
 	      よって本実験は正しく計測が行えていたものと考えられる。
-	\item ツェナーダイオードの使い方
+	\item ツェナーダイオードの使い方\\
 	      ツェナーダイオードは電流が変化しても電圧が一定であるという特長を利用して定電圧回路に使用されたり，サージ電流や静電気からICなどを守る保護素子として使用される\cite{rohm}。
-	\item $V_\mathrm{L} - I_\mathrm{Z}$特性
+	\item $V_\mathrm{L} - I_\mathrm{Z}$特性\\
 	      $V_\mathrm{L} - I_\mathrm{Z}特性$を図\ref{fig:zd2}に示す。電圧$V_\mathrm{L}$が約$6.8\,\mathrm{V}$のときに電流$I_\mathrm{Z}$が立ち上がっているため，ツェナー電圧$V_\mathrm{Z}$は$6.8\,\mathrm{V}$であることがわかる。
 	      \begin{figure}[H]
 		      \centering
-		      \includegraphics[keepaspectratio, scale=0.4]{ZD2.pdf}
-		      \caption{$V_\mathrm{L} - I_\mathrm{Z}特性$}
+		      \includegraphics[keepaspectratio, scale=0.5]{ZD2.pdf}
+		      \caption{$ツェナーダイオードの電流電圧特性$}
 		      \label{fig:zd2}
 	      \end{figure}
-	\item	入出力特性の考察
+	\item	入出力特性の考察\\
 	      \ref{fig:zd}より電圧$V_\mathrm{L}$が増加している区間ではツェナー電流$I_\mathrm{Z}$は増加していない。
 	      一方で，ツェナー電流$I_\mathrm{Z}$が増加している区間では電圧$V_\mathrm{L}$は増加していない。
 	      よってツェナーダイオードは，出力電圧とツェナー電圧は同時に増加しないような素子であると考えられる。
@@ -403,7 +404,7 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 \end{table}
 
 \subsubsection{結果}
-計測した電圧$V_\mathrm{L}$と電流$I_\mathrm{L}$を図\ref{tab:const}に示す。また，この値をグラフに描画したものを図\ref{fig:const1}，図\ref{fig:const2}に示す。
+計測した電圧$V_\mathrm{L}$と電流$I_\mathrm{L}$を表\ref{tab:const}に示す。また，この値をグラフに描画したものを図\ref{fig:const1}，図\ref{fig:const2}に示す。
 \begin{figure}[H]
 	\centering
 	\includegraphics[keepaspectratio, scale=0.8]{const1.pdf}
@@ -418,7 +419,7 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 \end{figure}
 \begin{table}[H]
 	\centering
-	\label{低電圧回路の電圧と電流の関係}
+	\caption{電圧回路の電圧と電流の関係}
 	\begin{tabular}{lll}
 		\hline
 		$電流I_\mathrm{Z}\,[\mathrm{mA}]$ & $電圧V_\mathrm{L}\,[\mathrm{V}]$ & $電流I_\mathrm{L}[\mathrm{mA}]$ \\ \hline
@@ -472,7 +473,7 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 		      \end{tabular}
 		      \label{tab:ra}
 	      \end{table}
-	\item $I_\mathrm{Z} - R_\mathrm{L}$特性，$I_\mathrm{Z} - R_\mathrm{Z}$特性の考察
+	\item $I_\mathrm{Z} - R_\mathrm{L}$特性，$I_\mathrm{Z} - R_\mathrm{Z}$特性の考察\\
 	      抵抗$R$にかかる電圧は，入力電圧からツェナー電圧を引いた$V_\mathrm{i} - V_\mathrm{Z}$となる。よって抵抗$R$に流れる電流＝回路全体に流れる電流は一定である。
 	      この電流はツェナーダイオード$ZD$と抵抗$R_L$に分流されるが，ツェナーダイオードは流れる電流が変化しても同じツェナー電圧を発生するので，$R_\mathrm{L}$の電流が変化しても出力電圧は不変である。
 	      また，図\ref{fig:rlrz}に可変抵抗特性とツェナー抵抗特性を示す。
@@ -492,7 +493,7 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 \begin{enumerate}[i)]
 	\item 図\ref{fig:taiyo}の回路を作成した。
 	\item ライトの光が太陽電池に均等に当たる位置に置く。このとき，電流計を見ながら値が最大になる位置に置いた。
-	\item	 ライトを一つのみ点灯させ，太陽電池の四つ角と中央の照度を測定した。
+	\item	 ライトを一つのみ点灯させた場合と，二つ点灯させた場合の両方で太陽電池の四つ角と中央の照度を測定した。
 	\item 太陽電池の裏面に熱電対を取付け，温度計の値を確認しながら太陽電池の温度が目標の温度になるようにサーキュレーターや濡らした布巾を用いて調節した。\label{sec:goto1}
 	\item 目標温度に到達したら可変抵抗を変化させ，電圧$V$と電流$I$を測定した。
 	\item 測定中に太陽電池の温度が目標温度から外れた場合は\ref{sec:goto1})を再び行った。
@@ -528,7 +529,9 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 \end{table}
 
 \subsubsection{結果}
-ライトの数と照度の関係を表\ref{tab:light}に示す。
+ライトの数と照度の関係を表\ref{tab:light}に示す。照度は，太陽電池の4つ角と中央の照度の平均値を代表値として用いた。
+計測した電圧$V$と電流$I$を表\ref{tab:taiyo}に示す。
+また，この値をグラフに描画したものを\ref{fig:taiyo1}に示す。
 \begin{table}[H]
 	\centering
 	\caption{ライトの数と照度の関係}
@@ -540,8 +543,6 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 	\end{tabular}
 	\label{tab:light}
 \end{table}
-計測した電圧$V$と電流$I$を表\ref{tab:taiyo}に示す。
-また，この値をグラフに描画したものを\ref{fig:taiyo1}に示す。
 \begin{figure}[H]
 	\centering
 	\includegraphics[keepaspectratio, scale=0.8]{taiyo1.pdf}
@@ -572,11 +573,11 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 		18.79                       & \multicolumn{1}{l|}{39.94}      & 18.89                    & 6.53                     & 20.50     & \multicolumn{1}{l|}{45.47}      & 18.62     & 99.30      \\
 		19.00                       & \multicolumn{1}{l|}{34.76}      & 19.11                    & 0.01                     & 20.90     & \multicolumn{1}{l|}{9.43}       & 18.84     & 89.00      \\
 		19.50                       & \multicolumn{1}{l|}{22.26}      & 19.21                    & 0.00                     & 21.15     & \multicolumn{1}{l|}{7.56}       & 19.00     & 81.60      \\
-		19.80                       & \multicolumn{1}{l|}{10.03}      &                          &                          & 21.51     & \multicolumn{1}{l|}{0.00}       & 19.21     & 68.40      \\
-		19.89                       & \multicolumn{1}{l|}{6.25}       &                          &                          &           & \multicolumn{1}{l|}{}           & 19.41     & 53.73      \\
-		19.93                       & \multicolumn{1}{l|}{7.95}       &                          &                          &           & \multicolumn{1}{l|}{}           & 19.59     & 37.96      \\
-		20.25                       & \multicolumn{1}{l|}{0.01}       &                          &                          &           & \multicolumn{1}{l|}{}           & 19.80     & 19.85      \\
-		20.36                       & \multicolumn{1}{l|}{0.00}       &                          &                          &           & \multicolumn{1}{l|}{}           & 20.23     & 0.00       \\ \hline
+		19.80                       & \multicolumn{1}{l|}{10.03}      & -                        & -                        & 21.51     & \multicolumn{1}{l|}{0.00}       & 19.21     & 68.40      \\
+		19.89                       & \multicolumn{1}{l|}{6.25}       & -                        & -                        & -         & \multicolumn{1}{l|}{-}          & 19.41     & 53.73      \\
+		19.93                       & \multicolumn{1}{l|}{7.95}       & -                        & -                        & -         & \multicolumn{1}{l|}{-}          & 19.59     & 37.96      \\
+		20.25                       & \multicolumn{1}{l|}{0.01}       & -                        & -                        & -         & \multicolumn{1}{l|}{-}          & 19.80     & 19.85      \\
+		20.36                       & \multicolumn{1}{l|}{0.00}       & -                        & -                        & -         & \multicolumn{1}{l|}{-}          & 20.23     & 0.00       \\ \hline
 	\end{tabular}
 	\label{tab:taiyo}
 \end{table}
@@ -590,8 +591,12 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 	\item 各条件下における電流電圧特性の測定結果を用いた電力の算出\\
 	      表\ref{tab:taiyo}から電力を算出し，その値をグラフに描画したものを図\ref{fig:taiyo2}に示す。また，核実験条件における最大電力点を表に整理したものを表\ref{tab:max}に示す。
 	      表\ref{tab:max}と図\ref{fig:taiyo2}より，目標温度が$30\,\mathrm{^\circ C}$の場合はライトの数に関わらず$18\,\mathrm{V}$付近が電力が最も大きいことがわかる。
-	      また，目標温度が$50\,\mathrm{^\circ C}$の場合は，ライトの数に関わらず$16\,\mathrm{V}$付近が最も電力が沖いことがわかる。
-	      以上の事実より，太陽電池の温度が低いかつ照度が高い場合に最大電力は大きくなり，温度が高いかつ照度が低い場合に最大電力が小さくなることがわかった。
+	      また，目標温度が$50\,\mathrm{^\circ C}$の場合は，ライトの数に関わらず$16\,\mathrm{V}$付近が最も電力が大きいことがわかる。
+	      以上の事実より，太陽電池の温度が低いかつ照度が高い場合に最大電力は大きくなり，温度が高いかつ照度が低い場合に最大電力が小さくなることがわかった。\\
+	      太陽電池は，太陽の光エネルギーを吸収して直接電気に変えるエネルギー変換素子である\cite{taiyo}。
+	      シリコンや化合物などの半導体で作られており、この半導体に光が当たると、日射強度に比例して発電する\cite{taiyo}。
+	      シリコンなどの半導体の温度が上昇すると，結晶格子間隔（格子定数）が伸びることでバンドギャップ（禁制帯幅）が狭くなる。バンドギャップが狭くなると出力電圧が低下し，発電効率が落ちてしまう。\cite{ondo}。
+	      このことから，目標温度がが高い場合は同じ照度でも最大電力が小さかったと考えることができる。
 	      \begin{figure}[H]
 		      \centering
 		      \includegraphics[keepaspectratio, scale=0.8]{taiyo2.pdf}
@@ -611,10 +616,6 @@ MPPTには様々な手法があるが，その手法を考える上でも太陽�
 		      \end{tabular}
 		      \label{tab:max}
 	      \end{table}
-	      太陽電池は，太陽の光エネルギーを吸収して直接電気に変えるエネルギー変換素子である\cite{taiyo}。
-	      シリコンや化合物などの半導体で作られており、この半導体に光が当たると、日射強度に比例して発電する\cite{taiyo}。
-	      シリコンなどの半導体の温度が上昇すると，結晶格子間隔（格子定数）が伸びることでバンドギャップ（禁制帯幅）が狭くなる。バンドギャップが狭くなると出力電圧が低下し，発電効率が落ちてしまう。\cite{ondo}。
-	      このことから，目標温度がが高い場合は同じ照度でも最大電力が小さかったと考えることができる。
 	\item MPPT制御が必要とされる理由\\
 	      MPPT制御とは，和名に直すと最大電力点追従制御である。名前の通り，気象条件で変化する気温や照度に合わせて最適な動作点に追従する制御のことである。
 	      このMPPT制御のアルゴリズムには，山登り法と電圧追従法の二通りがあり，次に紹介する。\\
