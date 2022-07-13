@@ -1,0 +1,67 @@
+\documentclass[11pt,dvipdfmx]{jarticle}
+\usepackage[a4paper,top=3cm,bottom=2cm,left=2cm,right=2cm]{geometry}
+\usepackage{mathtools}
+
+\begin{document}
+\title{電力と力率 実験前課題}
+\author{宮崎 永}
+\date{2022/7/13}
+\maketitle
+
+\section{原理}
+\subsection{瞬時電力}
+交流回路の電流と電圧を
+\begin{equation}
+  i(t) = I_0 \sin (\omega t + \theta_\mathrm{i})
+\end{equation}
+\begin{equation}
+  v(t) = V_0 \sin (\omega t + \theta_\mathrm{v})
+\end{equation}
+の正弦波によって表される。よってこれらの積
+\begin{equation}
+  p(t) = i(t)v(t) = I_0 V_0 \sin (\omega t + \theta_\mathrm{i}) \sin (\omega t + \theta_\mathrm{v})
+\end{equation}
+を瞬時電力という。
+\subsection{有効電力}
+有効電力は，負荷で実際に消費される電力のことであり，これを次の式で表す。
+\begin{equation}
+  P = V I \cos \theta [\mathrm{W}]
+\end{equation}
+\subsection{皮相電力}
+皮相電力は，電源から送られた全体の電力のことであり，これを次の式で表す。
+\begin{equation}
+  S = V I [\mathrm{VA}]
+\end{equation}
+\subsection{無効電力}
+無効電力は，負荷で消費されない電力のことであり，これを次の式で表す。
+\begin{equation}
+  Q = V I \sin \theta [\mathrm{var}]
+\end{equation}
+または
+\begin{equation}
+  Q = V I \sqrt{1 - \cos^2 \theta} [\mathrm{var}]
+\end{equation}
+\subsection{力率}
+力率$\cos \theta$は，電源から送られた電力が負荷で消費される割合のことであり，
+\begin{equation}
+  \cos \theta = \frac{有効電力}{皮相電力} = \frac{P}{VI}
+\end{equation}
+で表される。
+
+\section{数式展開}
+\begin{align}
+  p = ei = -|Z|I^2 \cos(2 \omega t + \angle Z) + |Z|I^2 \cos\angle Z
+\end{align}
+\begin{align}
+  p_\mathrm{a} = |Z|I^2 \cos \angle Z(1 - \cos 2 \omega t)
+\end{align}
+\begin{align}
+  p_\mathrm{r} = ei = |Z|I-2 \sin \angle Z \sin 2 \omega t
+\end{align}
+\begin{align}
+  e = \sqrt{2} E \sin (\omega t + \angle Z)
+\end{align}
+
+
+
+\end{document}
