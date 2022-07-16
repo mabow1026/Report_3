@@ -2,6 +2,7 @@
 
 \usepackage{eee}
 \usepackage{subfig}
+\usepackage{here}
 
 \renewcommand{\labelenumi}{\alph{enumi}}
 \renewcommand{\labelenumii}{\roman{enumii}}
@@ -13,8 +14,8 @@
 	\numTitle{3}{電力と力率} % 実験番号、タイトルを記述
 	\subTitle{} % サブタイトルがあれば記述
 	\jikkenbi{令和4年7月14日(木)} % 実験日を記述
-	\jikkenbiII{令和　4年7月21日(木)} % 実験日を記述(二日目がある場合。ない場合はこの行をコメントアウト)
-	\kyoudou{共同実験者名} % 共同実験者名を記述
+	\jikkenbiII{令和4年7月21日(木)} % 実験日を記述(二日目がある場合。ない場合はこの行をコメントアウト)
+	\kyoudou{3325 谷下 文紀　3329 野島 奏一朗　3337吉野 曹生} % 共同実験者名を記述
 	\kyoudouII{} % その他の共同実験者名を記述
 	\yoteibi{/ 　}% 予定日を記述
 	\yoteibiII{}% 予定日2を記述
@@ -92,14 +93,99 @@
 	S &=& VI\nonumber\\
 	&=& \sqrt{P^2+Q^2}
 \end{eqnarray}
+\section{事前学習}
+\subsection{瞬時電力}
+交流回路の電流と電圧を
+\begin{equation}
+	i(t) = I_0 \sin (\omega t + \theta_\mathrm{i})
+\end{equation}
+\begin{equation}
+	v(t) = V_0 \sin (\omega t + \theta_\mathrm{v})
+\end{equation}
+の正弦波によって表される。よってこれらの積
+\begin{equation}
+	p(t) = i(t)v(t) = I_0 V_0 \sin (\omega t + \theta_\mathrm{i}) \sin (\omega t + \theta_\mathrm{v})
+\end{equation}
+を瞬時電力という。
+\subsection{有効電力}
+有効電力は，負荷で実際に消費される電力のことであり，これを次の式で表す。
+\begin{equation}
+	P = V I \cos \theta [\mathrm{W}]
+\end{equation}
+\subsection{皮相電力}
+皮相電力は，電源から送られた全体の電力のことであり，これを次の式で表す。
+\begin{equation}
+	S = V I [\mathrm{VA}]
+\end{equation}
+\subsection{無効電力}
+無効電力は，負荷で消費されない電力のことであり，これを次の式で表す。
+\begin{equation}
+	Q = V I \sin \theta [\mathrm{var}]
+\end{equation}
+または
+\begin{equation}
+	Q = V I \sqrt{1 - \cos^2 \theta} [\mathrm{var}]
+\end{equation}
+\subsection{力率}
+力率$\cos \theta$は，電源から送られた電力が負荷で消費される割合のことであり，
+\begin{equation}
+	\cos \theta = \frac{有効電力}{皮相電力} = \frac{P}{VI}
+\end{equation}
+で表される。
 
+\section{数式展開}
+\begin{align}
+	p(t) \quad & = \quad	e(t) \times i(t) \nonumber                                   \\
+	           & = \quad 2 I^{2}|Z| \sin (\omega t+\angle Z) \sin \omega t \nonumber  \\
+	           & = \quad -|Z| I^{2} \cos (2 \omega t+\angle Z)+I^{2}|Z| \cos \angle Z
+\end{align}
+\begin{align}
+	P_\mathrm{r}(t) \quad & = \quad e_{r}(t) \times i(t) \nonumber                                               \\
+	                      & = \quad 2 R I^{2}|Z| \sin \omega t \nonumber                                         \\
+	                      & = \quad 2|Z| I^{2} \cos (\angle Z) \times\left(1-\cos ^{2} \omega t\right) \nonumber \\
+	                      & = \quad 2 I^{2}|Z| \cos (\angle Z)\left(1-\frac{1+\cos 2 \theta}{2}\right) \nonumber \\
+	                      & = \quad I^{2}|Z| \cos (\angle Z)(1-\cos \omega t)
+\end{align}
+\begin{align}
+	P_\mathrm{r}(t) \quad & = \quad e_{r}(t) \times i(t) \nonumber                                                                                                \\
+	                      & = \quad \left(\sqrt{2} I \sin \left(\omega t \pm \frac{\pi}{2}\right) X\right) \times \sqrt{2} I \sin \omega t \nonumber              \\
+	                      & = \quad 2 X I^{2} \sin \left(\omega t \pm \frac{\pi}{2}\right) \sin \omega t \nonumber                                                \\
+	                      & = \quad 2 X I^{2}\left(-\frac{1}{2} \cos \left(\omega t \pm \frac{\pi}{2}\right)-\cos \left(\pm \frac{\pi}{2}\right)\right. \nonumber \\
+	                      & = \quad I^{2} X \cos \left(\sin t \pm \frac{\pi}{2}\right) \nonumber                                                                  \\
+	                      & = \quad -|Z| I^{2} \sin \angle Z \times \cos \left(2 \omega t \mp \frac{\pi}{2}\right)
+\end{align}
+\begin{align}
+	P_{r} \quad & = \quad |Z| I^{2}=E I \nonumber                          \\
+	e           & = \quad \sqrt{2}|Z| I \sin (\omega t+\angle Z) \nonumber \\
+	e           & = \quad \sqrt{2} E \sin (\omega t+\angle Z)
+\end{align}
+\newpage
 
 \section{方法}
 \subsection{使用器具}
-今回の実験で使用した器具を
+今回の実験で使用した器具を表\ref{tab:kiki}に示す
+\begin{table}[H]
+	\caption{使用器具(機器)}
+	\begin{tabular}{lllll}
+		\hline
+		名称     & 製造元      & 型番               & 製造番号/管理番号       & 備考(レンジ等)                                     \\ \hline
+		電圧計    & YEW      & M9G1723          & B-3039.44.10/10 & 150/300$\,[\mathrm{V}]$                      \\
+		電流計    & YEW      & M9G846           & -               & 2/5/10/20$\,[\mathrm{A}]$                    \\
+		電力計    & YOKOGAWA & YEW2041 120/240V & B-3041.H1.1/2   & 5/25$\,[\mathrm{A}]$ 120/240$\,[\mathrm{V}]$ \\
+		力率計    & YOKOGAWA & TYPE 2039        & -               & 5/25$\,[\mathrm{A}]$                         \\
+		綜合負荷装置 & 山菱電機株式会社 & UI-0090          & B-3067.46.2/2   & 力率設定 0.1 - 0.98                              \\
+		スライダック & 東芝       & SLIDAC SD120     & B-5031.H1.2/3   & 出力電圧 0 - 130$\,[\mathrm{V}]$                 \\ \hline
+	\end{tabular}
+	\label{tab:kiki}
+\end{table}
 
 \subsection{実験手順}
-
+\begin{figure}[H]
+	\centering
+	\includegraphics[keepaspectratio, scale=0.65]{power.pdf}
+	\caption{実験回路図}
+	\label{fig:power}
+\end{figure}
 
 \section{結果}
 \section{考察}
