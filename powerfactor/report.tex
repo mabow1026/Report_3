@@ -4,6 +4,7 @@
 \usepackage{subfig}
 \usepackage{here}
 \usepackage{scalefnt}
+\usepackage{url}
 
 \renewcommand{\labelenumi}{\alph{enumi}}
 \renewcommand{\labelenumii}{\roman{enumii}}
@@ -110,32 +111,29 @@
 \end{equation}
 を瞬時電力という。
 \subsection{有効電力}
-有効電力は，負荷で実際に消費される電力のことであり，これを次の式で表す。
+有効電力は，負荷で消費される電力\cite{a}であり，これを次の式で表す。
 \begin{equation}
 	P = V I \cos \theta [\mathrm{W}]
 \end{equation}
 \subsection{皮相電力}
-皮相電力は，電源から送られた全体の電力のことであり，これを次の式で表す。
+皮相電力は，電源から送り出される電力\cite{a}であり，これを次の式で表す。
 \begin{equation}
 	S = V I [\mathrm{VA}]
 \end{equation}
 \subsection{無効電力}
-無効電力は，負荷で消費されない電力のことであり，これを次の式で表す。
+無効電力は，負荷と電源間を往復するだけで消費されない電力\cite{a}であり，これを次の式で表す。
 \begin{equation}
 	Q = V I \sin \theta [\mathrm{var}]
 \end{equation}
-または
-\begin{equation}
-	Q = V I \sqrt{1 - \cos^2 \theta} [\mathrm{var}]
-\end{equation}
 \subsection{力率}
-力率$\cos \theta$は，電源から送られた電力が負荷で消費される割合のことであり，
+力率$\cos \theta$は，皮相電力Sの大きさに対する有効電力Pの大きさの割合, または皮相電力と有効電力のなす角θの余弦($\cos \theta$)と定義される\cite{a}。
+力率は式(\ref{eq:cos})で表される。
 \begin{equation}
 	\cos \theta = \frac{有効電力}{皮相電力} = \frac{P}{VI}
+	\label{eq:cos}
 \end{equation}
-で表される。
 
-\section{数式展開}
+\subsection{数式展開}
 \begin{align}
 	p(t) \quad & = \quad	e(t) \times i(t) \nonumber                                   \\
 	           & = \quad 2 I^{2}|Z| \sin (\omega t+\angle Z) \sin \omega t \nonumber  \\
@@ -394,16 +392,47 @@ RL負荷の電力測定の結果を表\ref{tab:rc1.0}，表\ref{tab:rc0.8}，表
 
 \subsection{低力率用電力計を用いたRL回路とRC回路の実験結果}
 低力率用電力計を用いてRL回路とRC回路の電力計測を行った。
-RL,RC回路ともに設定力率は0.2である。RL回路とRC回路の計測結果をそれぞれ表\ref{tab:}と表\ref{tab:}に示す。
+RL,RC回路ともに設定力率は0.2である。RL回路とRC回路の計測結果をそれぞれ表\ref{tab:rl0.2_w}と表\ref{tab:rc0.2_w}に示す。
 通常の電力計を用いた\ref{sec:RL}や\ref{sec:RC}の実験結果よりも，計算力率との差が小さいことがわかる。
 
+\begin{table}[H]
+	\centering
+	\caption{RL回路(力率0.2)}
+	\begin{tabular}{|l|l|l|l|ll|l|}
+		\hline
+		\multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}電流指示\\ $[\mathrm{A}]$\end{tabular}} & \multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}電力\\ $P_\mathrm{a}\,[\mathrm{W}]$\end{tabular}} & \multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}電圧\\ $V\,[\mathrm{V}]$\end{tabular}} & \multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}電流\\ $I\,[\mathrm{A}]$\end{tabular}} & \multicolumn{2}{l|}{力率$\cos\,\theta$} & \multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}皮相電力\\ $P_0\,[\mathrm{VA}]$\end{tabular}}          \\ \cline{5-6}
+		                                                                                                          &                                                                                                                                    &                                                                                                            &                                                                                                            & \multicolumn{1}{l|}{力率}               & 計算力率                                                                                                           &        \\ \hline
+		1                                                                                                         & 39.8                                                                                                                               & 99.8                                                                                                       & 1.00                                                                                                       & \multicolumn{1}{l|}{0.450}            & 0.398798                                                                                                       & 99.8   \\
+		2                                                                                                         & 55.3                                                                                                                               & 99.5                                                                                                       & 2.02                                                                                                       & \multicolumn{1}{l|}{0.322}            & 0.275138                                                                                                       & 200.99 \\
+		3                                                                                                         & 80.0                                                                                                                               & 100.0                                                                                                      & 3.00                                                                                                       & \multicolumn{1}{l|}{0.301}            & 0.266667                                                                                                       & 300    \\
+		4                                                                                                         & 99.0                                                                                                                               & 100.0                                                                                                      & 3.99                                                                                                       & \multicolumn{1}{l|}{0.295}            & 0.24812                                                                                                        & 399    \\
+		5                                                                                                         & 120.0                                                                                                                              & 99.8                                                                                                       & 4.95                                                                                                       & \multicolumn{1}{l|}{0.280}            & 0.24291                                                                                                        & 494.01 \\ \hline
+	\end{tabular}
+	\label{tab:rl0.2_w}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\caption{RC回路(力率0.2)}
+	\begin{tabular}{|l|l|l|l|ll|l|}
+		\hline
+		\multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}電流指示\\ $[\mathrm{A}]$\end{tabular}} & \multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}電力\\ $P_\mathrm{a}\,[\mathrm{W}]$\end{tabular}} & \multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}電圧\\ $V\,[\mathrm{V}]$\end{tabular}} & \multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}電流\\ $I\,[\mathrm{A}]$\end{tabular}} & \multicolumn{2}{l|}{力率$\cos\,\theta$} & \multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}皮相電力\\ $P_0\,[\mathrm{VA}]$\end{tabular}}           \\ \cline{5-6}
+		                                                                                                          &                                                                                                                                    &                                                                                                            &                                                                                                            & \multicolumn{1}{l|}{力率}               & 計算力率                                                                                                           &         \\ \hline
+		1                                                                                                         & 42.0                                                                                                                               & 100.2                                                                                                      & 1.00                                                                                                       & \multicolumn{1}{l|}{0.480}            & 0.419162                                                                                                       & 100.2   \\
+		2                                                                                                         & 65.0                                                                                                                               & 100.1                                                                                                      & 1.98                                                                                                       & \multicolumn{1}{l|}{0.310}            & 0.327955                                                                                                       & 198.198 \\
+		3                                                                                                         & 92.8                                                                                                                               & 100.0                                                                                                      & 3.02                                                                                                       & \multicolumn{1}{l|}{0.270}            & 0.307285                                                                                                       & 302     \\
+		4                                                                                                         & 116.0                                                                                                                              & 99.9                                                                                                       & 4.00                                                                                                       & \multicolumn{1}{l|}{0.250}            & 0.29029                                                                                                        & 399.6   \\
+		5                                                                                                         & -                                                                                                                                  & -                                                                                                          & -                                                                                                          & \multicolumn{1}{l|}{-}                & -                                                                                                              & -       \\ \hline
+	\end{tabular}
+	\label{tab:rc0.2_w}
+\end{table}
 
 
 \section{考察}
 \section{結論}
 \begin{thebibliography}{9}%参考文献数が10以上の場合は9を99に変更
 	%\bibitem{xxx}の引用を本文中で行うには\cite{xxx}と記述。
-	\bibitem{a} 著者名, 書名，出版社，発行年．
+	\bibitem{a} 理化工業株式会社, \url{https://www.rkcinst.co.jp/technical_commentary/399094/}，閲覧日 2022年7月20日．
 \end{thebibliography}
 
 
