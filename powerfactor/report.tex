@@ -432,6 +432,23 @@ RL,RC回路ともに設定力率は0.2である。RL回路とRC回路の計測�
 
 
 \section{考察}
+\begin{table}[H]
+	\centering
+	\caption{測定力率と計算力率の相対誤差率}
+	\begin{tabular}{|l|ll|}
+		\hline
+		\multicolumn{1}{|c|}{\multirow{2}{*}{力率}} & \multicolumn{2}{c|}{負荷}                  \\ \cline{2-3}
+		\multicolumn{1}{|c|}{}                    & \multicolumn{1}{l|}{L}        & C        \\ \hline
+		1                                         & \multicolumn{1}{l|}{1.066679} & 0.599218 \\ \hline
+		0.8                                       & \multicolumn{1}{l|}{2.296395} & 1.153664 \\ \hline
+		0.6                                       & \multicolumn{1}{l|}{1.950379} & 3.180179 \\ \hline
+		0.4                                       & \multicolumn{1}{l|}{5.699057} & 5.417918 \\ \hline
+		0.2                                       & \multicolumn{1}{l|}{26.4469}  & 11.74786 \\ \hline
+		0.2(低力率)                                  & \multicolumn{1}{l|}{15.38186} & 11.5005  \\ \hline
+	\end{tabular}
+	\label{tab:誤差}
+\end{table}
+
 \section{結論}
 \begin{thebibliography}{9}%参考文献数が10以上の場合は9を99に変更
 	%\bibitem{xxx}の引用を本文中で行うには\cite{xxx}と記述。
